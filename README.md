@@ -13,14 +13,12 @@
 ## 公開前の状態について
 
 - **検索よけ:** `robots.txt` と `<meta name="robots" content="noindex, nofollow">` で検索エンジンに載らないようにしています。
-- **未確定の箇所:** プライバシーポリシーのリンク（`data-todo` 付きの `href="#"`）。
-- **繁體中文版:** 下訳です。公開前に台湾の方の確認を入れてください。
-- **採用実績の機種名（vivo）:** 共同開発先との取り決めで掲載してよいか、公開前に確認してください。
 
 ## ファイル
 
 - `index.html` — 日本語版（スマホ・PC両対応）
 - `zh-tw/index.html` — 繁體中文版。**直接編集せず**、日本語版を直してから、制作用フォルダの `cnw-corporate/tools/build_zh.py` で作り直す
+- `privacy/index.html` ・ `zh-tw/privacy/index.html` — プライバシーポリシー（4サイト共通）
 - `css/style.css` / `js/main.js` — 両言語で共通
 - `images/` — レンズの動画と静止画、製品画像、拠点の地図（日本語用・繁體中文用）
 - `robots.txt` — 検索よけ
