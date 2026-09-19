@@ -22,6 +22,7 @@
 - `css/style.css` / `js/main.js` — 両言語で共通
 - `images/` — レンズの動画と静止画、製品画像、拠点の地図（日本語用・繁體中文用）
 - `robots.txt` — 検索よけ
+- `articles/` ・ `css/article.css` — コラム。**直接編集しない**。制作用フォルダの `cnw-corporate/media/` が作り、毎週月曜 8時に自動で commit・push する（`scripts/publish.sh`）
 
 ## 手元での確認
 
