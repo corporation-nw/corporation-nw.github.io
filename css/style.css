@@ -474,6 +474,6 @@ html[lang="en"] .logo__en, html[lang="en"] .nav a, html[lang="en"] .nav__drop > 
 }
 
 /* 事業カードの下に添える SNS の1行（カード自体がリンクなので、中には入れられない） */
-.biz-sns { margin-top: 20px; font-size: 13px; color: var(--muted); }
-.biz-sns a { margin-left: 14px; color: var(--body); border-bottom: 1px solid var(--line); padding-bottom: 2px; }
+.biz-sns { margin-top: 20px; font-size: 13px; line-height: 2.1; color: var(--muted); }
+.biz-sns a { display: inline-block; white-space: nowrap; margin-left: 14px; color: var(--body); border-bottom: 1px solid var(--line); padding-bottom: 2px; }
 .biz-sns a:hover { color: #fff; border-color: currentColor; }
