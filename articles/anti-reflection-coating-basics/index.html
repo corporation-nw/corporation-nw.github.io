@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="N0MdC7l9ra_Mr8z7GULf4NwQdhKX47hE5YBFVFnXuj8" />
+  <title>反射防止コーティングのしくみ｜屈折率と多層膜の基本 ｜ Corporation NW</title>
+  <meta name="description" content="レンズの表面反射はなぜ起きるのか。屈折率の差と光の干渉から、単層膜・多層膜の反射防止コーティングの原理を、出典つきの数値で解説します。">
+  <link rel="canonical" href="https://cnw2026.com/articles/anti-reflection-coating-basics/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="反射防止コーティングのしくみ｜屈折率と多層膜の基本 ｜ Corporation NW">
+  <meta property="og:description" content="レンズの表面反射はなぜ起きるのか。屈折率の差と光の干渉から、単層膜・多層膜の反射防止コーティングの原理を、出典つきの数値で解説します。">
+  <meta property="og:url" content="https://cnw2026.com/articles/anti-reflection-coating-basics/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#06070b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Shippori+Mincho:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/article.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "反射防止コーティングのしくみ｜屈折率と多層膜の基本", "description": "レンズの表面反射はなぜ起きるのか。屈折率の差と光の干渉から、単層膜・多層膜の反射防止コーティングの原理を、出典つきの数値で解説します。", "datePublished": "2026-09-28", "dateModified": "2026-09-28", "inLanguage": "ja", "mainEntityOfPage": "https://cnw2026.com/articles/anti-reflection-coating-basics/", "author": {"@type": "Organization", "name": "Corporation NW 編集部"}, "publisher": {"@type": "Organization", "name": "有限会社シン・ワールド（Corporation NW）", "url": "https://cnw2026.com/"}, "image": ["https://cnw2026.com/articles/images/anti-reflection-coating-basics-mechanism.jpg", "https://cnw2026.com/articles/images/anti-reflection-coating-basics-comparison.jpg"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "反射防止コーティングをすれば、レンズの反射は完全になくなりますか。", "acceptedAnswer": {"@type": "Answer", "text": "完全にはなくなりません。単層膜の場合、膜の屈折率が基材に対する理想値からずれていると反射が残ります。島津製作所の解説では、屈折率1.46の石英ガラスにMgF2（屈折率1.38）をコーティングした場合、反射率は1.79%まで下がるものの0%にはならないとされています。"}}, {"@type": "Question", "name": "なぜ4分の1波長の厚さにするのですか。", "acceptedAnswer": {"@type": "Answer", "text": "膜の表面とガラスとの境界、2か所で反射する光の位相をずらして重ねるためです。PVEducationの解説によれば、この厚さのときに2つの反射光が逆位相になり、打ち消し合う量が最大になります。"}}, {"@type": "Question", "name": "単層膜と多層膜では何が違いますか。", "acceptedAnswer": {"@type": "Answer", "text": "単層膜は特定の1つの波長に対して反射を抑える設計です。多層膜は屈折率の異なる膜を重ねることで、ニコンの技術解説にあるように、可視光のような広い波長帯域の各波長で反射を防げるように設計します。"}}, {"@type": "Question", "name": "コーティングなしのレンズはどれくらい光を失いますか。", "acceptedAnswer": {"@type": "Answer", "text": "キヤノンの技術解説では、レンズ1面でおよそ4%の光が反射で失われるとされています。5枚から10枚のレンズを組み合わせた一般的なカメラレンズでは、コーティングがなければ全体の透過率が半分以下まで落ち込みます。"}}, {"@type": "Question", "name": "反射防止コーティングは写真の写り方にも影響しますか。", "acceptedAnswer": {"@type": "Answer", "text": "影響します。表面で反射した光の一部はレンズ内で迷光となり、ゴーストやフレアの原因になります。反射を抑えることは、光を通す量を増やすだけでなく、写りの質にも関わります。"}}]}</script>
+</head>
+<body class="a-page">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="a-header">
+  <div class="a-header__inner">
+    <a class="logo" href="/">
+      <span class="logo__en">Corporation NW</span>
+      <span class="logo__ja">有限会社シン・ワールド</span>
+    </a>
+    <nav class="a-header__nav" aria-label="メインメニュー">
+      <a class="a-hide-sp" href="/#products">製品・サービス</a>
+      <a class="a-hide-sp" href="/#business">事業</a>
+      <a href="/articles/">コラム</a>
+      <a class="a-header__cta" href="/#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="a-main">
+  <article class="a-article">
+    <div class="a-wrap">
+      
+      <nav class="a-crumbs" aria-label="パンくずリスト"><a href="/">ホーム</a><span aria-hidden="true">/</span><a href="/articles/">コラム</a></nav>
+      <header class="a-head">
+        <p class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-09-28">2026年9月28日</time></p>
+        <h1>反射防止コーティングのしくみ｜屈折率と多層膜の基本</h1>
+        <p class="a-lead">レンズの表面反射はなぜ起きるのか。屈折率の差と光の干渉から、単層膜・多層膜の反射防止コーティングの原理を、出典つきの数値で解説します。</p>
+      </header>
+      <nav class="a-toc" aria-label="目次"><p class="a-toc__title">目次</p><ol><li><a href="#s1">反射はなぜ起きるのか｜屈折率の差が光をはね返す</a></li><li><a href="#s2">単層膜のしくみ｜光をわざとぶつけて打ち消す</a></li><li><a href="#s3">なぜ単層膜では反射がゼロにならないのか</a></li><li><a href="#s4">多層膜でどう改善するのか｜層を重ねて帯域を広げる</a></li><li><a href="#s5">カメラレンズで実際にどれだけ効くのか</a></li><li><a href="#s6">まとめ</a></li></ol></nav>
+      <div class="a-body">
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>眼鏡のレンズやカメラのレンズって、光を通すためのものなのに、ちょっと角度を変えると表面がうっすら光って見えますよね。あれは何が起きているんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>それは表面で反射した光です。ガラスは透明ですが、光がすべて通り抜けるわけではありません。空気からガラスに入る瞬間、屈折率が変わる境界面で、光の一部がはね返されます。屈折率は、光がその物質の中でどれだけ速度を落とすかを表す数値で、空気はほぼ1.00、一般的な光学ガラスはおよそ1.5前後です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>屈折率の差があると反射する、という理屈はなんとなく分かります。どれくらいの光が実際に失われているのか、次で教えてください。</p></div>
+<h2 id="s1">反射はなぜ起きるのか｜屈折率の差が光をはね返す</h2>
+<figure class="a-figure"><img src="/articles/images/anti-reflection-coating-basics-mechanism.jpg" alt="ガラス表面のコーティング層で、2つの反射光が位相のずれた波として重なり打ち消し合う断面図" loading="lazy" decoding="async"><figcaption>コーティング表面とガラス表面、2か所の反射が打ち消し合うしくみ</figcaption></figure>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span><mark>キヤノンの技術解説では、レンズの表面反射によって約4%の光が失われるとされています。</mark>1枚のレンズには表と裏の2つの面があるので、1枚を通過するだけで光量はおよそ8%減ります。カメラレンズのように5枚から10枚のレンズを組み合わせた光学系では、コーティングをしていなければ透過率は半分以下まで落ち込みます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>それは想像していたより大きいですね。この反射率は、計算で求められるものなんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>はい。垂直に光が入る場合の反射率は、境界の両側の屈折率だけで決まります。京都産業大学の光学講義資料では、垂直入射のときの振幅反射率を rs = (n1 − n2)/(n1 + n2) と表し、強度としての反射率はこの絶対値を2乗すれば求まる、と説明されています。n1が入射側（空気）、n2が出ていく側（ガラス）の屈折率です。ニコンの技術解説でも、光の干渉現象を利用して、膜に用いる材料の屈折率と厚さを設計することで反射を減らす、という考え方が示されています。</p></div>
+<div class="box box--point"><p class="box__title">垂直入射での反射率の考え方</p><ul><li>振幅反射率：rs = (n1 − n2) / (n1 + n2)</li><li>強度としての反射率：R = rs の2乗</li><li>n1・n2 の差が大きいほど、R は大きくなる</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>なるほど、屈折率の差そのものが反射の大きさを決めているんですね。反射防止コーティングは、この反射をどうやって減らしているんですか。</p></div>
+<h2 id="s2">単層膜のしくみ｜光をわざとぶつけて打ち消す</h2>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>塗る、というより「もう一つ反射面を足す」というのが近い表現です。ガラスの上に、屈折率も厚さも決まった薄い膜を1層のせると、反射する場所が2か所になります。1つは空気と膜の境界、もう1つは膜とガラスの境界です。この2つの反射光の位相をずらして重ねると、山と谷が打ち消し合って、反射光そのものが弱まります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>膜の厚さは、どうやって決めているんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>PVEducationの解説では、膜の中を進む光の波長が、入ってくる光の波長のちょうど4分の1になるように膜厚を選ぶ、とされています。式で書くと d1 = λ0 / (4n1) です。λ0が空気中での波長、n1が膜の屈折率です。この厚さのとき、2つの反射光がちょうど逆位相になり、打ち消し合う量が最大になります。同じ解説では、これらの反射光が互いに打ち消し合い、反射エネルギーが正味ゼロになる、とも述べられています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>位相がずれて打ち消し合う、という理屈は分かりました。膜の屈折率そのものは、何でもいいわけではなさそうですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そのとおりです。膜の屈折率が両側の媒質（空気とガラスなど）の屈折率の幾何平均になっているとき、反射がさらに小さくなるとされています。式にすると n1 = √(n0・n2) です。この条件と、先ほどの4分の1波長の厚さの条件が両方そろうと、2つの反射光の振幅までほぼ等しくなり、打ち消し合いがもっとも深くなります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>理屈のうえではきれいに消えそうですが、実際の材料でそこまでうまくいくものなんですか。</p></div>
+<h2 id="s3">なぜ単層膜では反射がゼロにならないのか</h2>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>実際に使われている膜の材料でもっとも標準的なのが、フッ化マグネシウム（MgF2）で、屈折率はおよそ1.38です。島津製作所の解説によると、屈折率1.46の石英ガラスの上に、このMgF2を4分の1波長の厚さ（波長550ナノメートルの場合）でコーティングすると、その波長での反射率は1.79%まで下がるとされています。無コーティングの約4%と比べると半分以下ですが、ゼロにはなっていません。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>1.79%ということは、さっき言っていた「幾何平均」の条件とは、ずれているということですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span><mark>そこがこの技術のおもしろいところです。</mark>石英ガラス（屈折率1.46）に対する理想の膜の屈折率は √(1×1.46) で、およそ1.21です。ところがMgF2の屈折率は1.38なので、理想値より高く、条件がぴったり合っていません。だから反射はゼロにならず、1.79%残ります。一方で同じ解説では、屈折率1.79のサファイアにMgF2をコーティングした場合、ほぼ0%まで反射率を下げられるとも述べられています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>サファイアだとうまくいくのはなぜですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>サファイアに対する理想の屈折率は √(1×1.79) で、およそ1.34です。MgF2の1.38はこれにかなり近いので、幾何平均の条件にほぼ合致します。同じMgF2という材料でも、下にあるガラスの種類によって、反射をどこまで減らせるかが変わるということです。</p></div>
+<div class="box box--warn"><p class="box__title">コーティング=反射ゼロ、ではない</p><p>反射防止コーティングを1層のせれば必ず反射が消える、というのは誤解です。膜の屈折率が基材の屈折率に対して最適な値からずれていると、反射は残ります。単層膜で使える材料は限られているため、あらゆる基材で理想の屈折率を用意できるとは限りません。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>単層膜には限界がある、ということですね。それなら、複数の波長にまとめて対応させることはできないんですか。</p></div>
+<h2 id="s4">多層膜でどう改善するのか｜層を重ねて帯域を広げる</h2>
+<figure class="a-figure"><img src="/articles/images/anti-reflection-coating-basics-comparison.jpg" alt="多層膜コーティングありとなしのレンズ表面を左右に並べ、反射光の強さの違いを示した比較図" loading="lazy" decoding="async"><figcaption>コーティングなしの強い反射と、多層膜コーティングによる反射の低減</figcaption></figure>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>できます。それが多層膜です。ニコンの技術解説では、カメラのように可視光の広い波長帯域を扱う場合、各波長で反射を防げるように、屈折率の異なる材料による多層膜を設計する、と説明されています。屈折率の高い膜と低い膜を交互に重ねることで、干渉が起きる場所を増やし、単層膜よりも広い波長範囲で反射を抑えられるようにする考え方です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>層を増やすと、どこまで反射を減らせるんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>島津製作所の解説によれば、コーティングを数層にすることで、石英ガラスのような基材でも、単一の波長に限れば反射率をほぼ0%にできるとされています。さらに層数を増やすことで、複数の波長、あるいは可視光全体のような広い帯域でも、反射率をほぼ0%に近づける設計が可能になるとも述べられています。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">膜の種類</th><th scope="col">反射を抑えられる範囲</th><th scope="col">代表的な材料・構成</th></tr></thead><tbody><tr><td>単層膜</td><td>特定の波長1点に対して最適化</td><td>MgF2（屈折率約1.38）</td></tr><tr><td>多層膜（数層）</td><td>単一波長でほぼ0%まで低減</td><td>高屈折率材料と低屈折率材料を交互に積層</td></tr><tr><td>多層膜（層数を増やす）</td><td>複数波長・広帯域でほぼ0%に近づける</td><td>積層数を増やした設計</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>なるほど、層を重ねること自体が目的ではなく、対応したい波長の範囲を広げるために重ねているんですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span><mark>層の数は「頑丈にするため」ではなく、「打ち消し合いをそろえたい波長の数を増やすため」に増えていきます。</mark>設計する側は、各層の屈折率・厚さの組み合わせを、対象にする波長域や入射角の範囲に合わせて計算で決めていきます。この仕組みが、実際のカメラレンズではどれくらいの差を生んでいるのか、次で見てみましょう。</p></div>
+<h2 id="s5">カメラレンズで実際にどれだけ効くのか</h2>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>先ほど触れたとおり、無コーティングのレンズ1面ではおよそ4%の光が反射で失われます。<mark>キヤノンの技術解説では、5枚から10枚ものレンズを組み合わせた一般的なカメラレンズでは、コーティングなしだと全体の透過率が半分以下まで落ち込むとされています。</mark>レンズを通るたびに反射で少しずつ光が減っていくので、枚数が増えるほど影響が大きくなります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>半分以下というのは、かなり暗くなるということですよね。実際の高級レンズではどこまで改善されているんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>同じ解説によれば、多層膜コーティングを施したキヤノンの高級レンズでは、紫外線から近赤外線までの広い波長域にわたって、99.9%もの光透過率を実現しているとされています。さらに、同社が開発したSWC（Subwavelength Structure Coating）という技術では、反射光の発生をおよそ0.05%にまで抑えられるとも説明されています。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">状態</th><th scope="col">光の透過・反射の目安</th></tr></thead><tbody><tr><td>無コーティングのレンズ1面</td><td>反射でおよそ4%の光が失われる</td></tr><tr><td>無コーティングのレンズ5〜10枚構成</td><td>全体の透過率が半分以下</td></tr><tr><td>多層膜コーティングを施したレンズ（紫外〜近赤外）</td><td>透過率99.9%</td></tr><tr><td>SWC技術を用いた面</td><td>反射光の発生がおよそ0.05%</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>透過率が上がるだけでなく、写真の写り方にも関係してきそうですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>関係します。反射で失われた光の一部は、レンズの中で迷光となり、ゴーストやフレアといった、写真に写り込む余計な光の原因にもなります。反射防止コーティングは、単に光を通しやすくするだけでなく、写りの質そのものにも関わる技術です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>屈折率の差から始まった話が、写真の写り方まで結びつくんですね。最後に、この技術が使われている分野を教えてください。</p></div>
+<h2 id="s6">まとめ</h2>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>カメラのレンズや眼鏡だけでなく、太陽電池のパネル表面、ディスプレイの保護ガラス、スマートフォンのカメラモジュールなど、光を効率よく通したい場所には広く使われています。屈折率の差を計算し、膜厚を波長の4分の1に合わせるという基本の考え方は、どの用途でも共通しています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>反射防止コーティングは、屈折率の差を利用して、わざと2か所で光を反射させ、それを打ち消し合わせる技術ということですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span><mark>そのとおりです。</mark>屈折率の差が反射を生み、膜厚と屈折率をそろえることでその反射同士を打ち消す。この基本の考え方の上に、単層膜から多層膜へと、対応できる波長や角度の範囲を広げる工夫が積み重ねられてきました。Corporation NWは2006年に設立し、2018年から光学分野の事業を行っており、ゴースト抑制のコーティングGLC（屈折率フリー設計、Nd 1.15〜1.60）を取り扱っています。反射防止・ゴースト抑制まわりの部材に関心のある方は、<a href="/#products">製品・サービス</a>のページもご覧ください。</p></div>
+      </div>
+      <section class="a-faq" aria-labelledby="faq-h"><h2 id="faq-h">よくある質問</h2><details><summary>反射防止コーティングをすれば、レンズの反射は完全になくなりますか。</summary><p>完全にはなくなりません。単層膜の場合、膜の屈折率が基材に対する理想値からずれていると反射が残ります。島津製作所の解説では、屈折率1.46の石英ガラスにMgF2（屈折率1.38）をコーティングした場合、反射率は1.79%まで下がるものの0%にはならないとされています。</p></details><details><summary>なぜ4分の1波長の厚さにするのですか。</summary><p>膜の表面とガラスとの境界、2か所で反射する光の位相をずらして重ねるためです。PVEducationの解説によれば、この厚さのときに2つの反射光が逆位相になり、打ち消し合う量が最大になります。</p></details><details><summary>単層膜と多層膜では何が違いますか。</summary><p>単層膜は特定の1つの波長に対して反射を抑える設計です。多層膜は屈折率の異なる膜を重ねることで、ニコンの技術解説にあるように、可視光のような広い波長帯域の各波長で反射を防げるように設計します。</p></details><details><summary>コーティングなしのレンズはどれくらい光を失いますか。</summary><p>キヤノンの技術解説では、レンズ1面でおよそ4%の光が反射で失われるとされています。5枚から10枚のレンズを組み合わせた一般的なカメラレンズでは、コーティングがなければ全体の透過率が半分以下まで落ち込みます。</p></details><details><summary>反射防止コーティングは写真の写り方にも影響しますか。</summary><p>影響します。表面で反射した光の一部はレンズ内で迷光となり、ゴーストやフレアの原因になります。反射を抑えることは、光を通す量を増やすだけでなく、写りの質にも関わります。</p></details></section>
+      <section class="a-sources" aria-labelledby="src-h"><h2 id="src-h">出典・参考資料</h2><ol><li><a href="https://www.cc.kyoto-su.ac.jp/~tanigawa/course_materials/Optics/Reflection.pdf" target="_blank" rel="noopener">不連続面での反射と屈折　Fresnel の公式</a></li><li><a href="https://www.pveducation.org/pvcdrom/design-of-silicon-cells/anti-reflection-coatings" target="_blank" rel="noopener">Anti-Reflection Coatings</a></li><li><a href="https://www.shimadzu.co.jp/products/opt/guide4/03.html" target="_blank" rel="noopener">反射防止膜（ARコーティング：Anti Reflection Coating）</a></li><li><a href="https://global.canon/ja/technology/s_labo/light/003/03.html" target="_blank" rel="noopener">サイエンスラボ 光の話　レンズコーティング</a></li><li><a href="https://www.jp.nikon.com/company/technology/technology_fields/process/anti_reflective_coating/" target="_blank" rel="noopener">反射防止膜 | 精密加工技術</a></li></ol></section>
+      <p class="a-note">この記事は Corporation NW 編集部が、公開されている資料をもとに AI を使って作成し、出典を確認したうえで掲載しています。対話の登場人物は、説明のための設定です。</p>
+      <aside class="a-cta"><span class="eyebrow">Corporation NW</span><p class="a-cta__name">製品・サービス</p><p>GLC・HD6 と取扱技術、業務内容をご紹介しています。</p><a class="btn btn--solid" href="/#products">製品・サービスを見る</a></aside>
+      <section class="a-more" aria-labelledby="more-h"><h2 id="more-h">ほかの記事</h2><ul class="a-cards"><li class="a-card"><a href="/articles/ghost-flare-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-09-21">2026年9月21日</time></span><span class="a-card__title">ゴースト・フレアの正体｜レンズ内反射の原因と抑える技術</span><span class="a-card__desc">スマホや車載カメラの写りを乱すゴースト・フレアはなぜ起きるのか。レンズ内反射の仕組みと、反射防止コーティング・遮光インキによる対策の考え方を対話でわかりやすく解説します。</span></a></li><li class="a-card"><a href="/articles/autumn-leaves-smartphone-kawaguchiko/"><span class="a-meta"><span class="a-cat">活用ガイド</span><time datetime="2026-09-27">2026年9月27日</time></span><span class="a-card__title">スマホで撮る紅葉のコツ｜河口湖もみじ回廊の作例で解説</span><span class="a-card__desc">河口湖もみじ回廊で撮った作例写真を見ながら、逆光の使い方、見上げる構図、望遠で富士山と重ねる方法、水面や落ち葉の撮り方を解説します。見頃の時期とライトアップの時間も紹介。</span></a></li></ul></section>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="logo__en">Corporation NW</span>
+        <span>有限会社シン・ワールド</span>
+        <address lang="ja">〒231-0062 神奈川県横浜市中区桜木町2-2<br>港陽ビル THE CODE 横浜 4階</address>
+      </div>
+      <nav class="footer-nav" aria-label="フッターメニュー">
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">COMPANY</span>
+          <a href="/#vision">ビジョン</a>
+          <a href="/#message">CEOメッセージ</a>
+          <a href="/#company">会社概要</a>
+          <a href="/#offices">拠点</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">PRODUCTS</span>
+          <a href="/#products">GLC</a>
+          <a href="/#products">HD6</a>
+          <a href="/articles/">コラム</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">BUSINESSES</span>
+          <a href="/mobile/">NW Mobile</a>
+          <a href="/agent/">NW agent</a>
+          <a href="/tonaritabi/">となり旅</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <nav aria-label="サイト情報">
+        <a href="/#contact">お問い合わせ</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </nav>
+      <small>© 2026 Corporation NW</small>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
