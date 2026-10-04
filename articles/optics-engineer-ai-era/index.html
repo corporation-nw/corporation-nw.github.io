@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="N0MdC7l9ra_Mr8z7GULf4NwQdhKX47hE5YBFVFnXuj8" />
+  <title>AI時代の光学エンジニア｜置き換わる仕事と、残る仕事 ｜ Corporation NW</title>
+  <meta name="description" content="スマホカメラの画質を決める光学部材の話から、開発の流れのどこがAIに置き換わり、どこに人の判断が残るのかを整理します。台湾の大学で行った講義をもとにした解説です。">
+  <link rel="canonical" href="https://cnw2026.com/articles/optics-engineer-ai-era/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI時代の光学エンジニア｜置き換わる仕事と、残る仕事 ｜ Corporation NW">
+  <meta property="og:description" content="スマホカメラの画質を決める光学部材の話から、開発の流れのどこがAIに置き換わり、どこに人の判断が残るのかを整理します。台湾の大学で行った講義をもとにした解説です。">
+  <meta property="og:url" content="https://cnw2026.com/articles/optics-engineer-ai-era/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#06070b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Shippori+Mincho:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/article.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI時代の光学エンジニア｜置き換わる仕事と、残る仕事", "description": "スマホカメラの画質を決める光学部材の話から、開発の流れのどこがAIに置き換わり、どこに人の判断が残るのかを整理します。台湾の大学で行った講義をもとにした解説です。", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "inLanguage": "ja", "mainEntityOfPage": "https://cnw2026.com/articles/optics-engineer-ai-era/", "author": {"@type": "Organization", "name": "Corporation NW 編集部"}, "publisher": {"@type": "Organization", "name": "有限会社シン・ワールド（Corporation NW）", "url": "https://cnw2026.com/"}, "image": ["https://cnw2026.com/articles/images/optics-engineer-ai-era-fovea.jpg", "https://cnw2026.com/articles/images/optics-engineer-ai-era-lightpath.jpg", "https://cnw2026.com/articles/images/optics-engineer-ai-era-shotnoise.jpg", "https://cnw2026.com/articles/images/optics-engineer-ai-era-prism.jpg"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "人の目とカメラでは、どちらの解像度が高いのですか", "acceptedAnswer": {"@type": "Answer", "text": "比べる軸によって変わります。人の目は網膜の中心にある中心窩の付近だけが高精細で、周辺では細部を見分ける力が落ちます。カメラは中心も周辺も同じ密度で画素が並ぶ代わりに、見たい場所へ性能を寄せることはできません。"}}, {"@type": "Question", "name": "暗い場所で写真がざらつくのはなぜですか", "acceptedAnswer": {"@type": "Answer", "text": "光が粒として届くため、届く数が毎回ゆらぐからです。浜松ホトニクスの技術資料では、このゆらぎを光ショットノイズと呼び、その大きさは信号の平方根で決まると説明されています。信号対雑音比を2倍にするには、光の量を4倍にする必要があります。"}}, {"@type": "Question", "name": "画素を小さくすると画質は良くなりますか", "acceptedAnswer": {"@type": "Answer", "text": "一概には良くなりません。同じセンサー面積でより多くの画素を並べられる一方、1画素が受け取る光子の数は減り、隣の画素への漏れ込みも増えます。そのため暗い場所では複数の画素をまとめて使うなどの対策が取られています。"}}, {"@type": "Question", "name": "光学部材の開発で、AIに置き換わりやすいのはどの作業ですか", "acceptedAnswer": {"@type": "Answer", "text": "定型的な外観検査や測定データの異常検知、設計候補の絞り込みなど、手順が決まっていて正解の形を定義できる作業です。公差の配り方の判断や、現場で異常の兆候に気づくこと、取引先との信頼関係の構築は人の側に残ります。"}}, {"@type": "Question", "name": "スマートフォンが薄いまま望遠を実現できるのはなぜですか", "acceptedAnswer": {"@type": "Answer", "text": "プリズムで光路を直角に折り曲げる屈曲光学（ペリスコープ構造）を使っているためです。レンズを厚み方向ではなく長さ方向に並べることで、薄い筐体のまま焦点距離を確保しています。"}}]}</script>
+</head>
+<body class="a-page">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="a-header">
+  <div class="a-header__inner">
+    <a class="logo" href="/">
+      <span class="logo__en">Corporation NW</span>
+      <span class="logo__ja">有限会社シン・ワールド</span>
+    </a>
+    <nav class="a-header__nav" aria-label="メインメニュー">
+      <a class="a-hide-sp" href="/#products">製品・サービス</a>
+      <a class="a-hide-sp" href="/#business">事業</a>
+      <a href="/articles/">コラム</a>
+      <a class="a-header__cta" href="/#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="a-main">
+  <article class="a-article">
+    <div class="a-wrap">
+      
+      <nav class="a-crumbs" aria-label="パンくずリスト"><a href="/">ホーム</a><span aria-hidden="true">/</span><a href="/articles/">コラム</a></nav>
+      <header class="a-head">
+        <p class="a-meta"><span class="a-cat">ビジネス</span><time datetime="2026-10-05">2026年10月5日</time></p>
+        <h1>AI時代の光学エンジニア｜置き換わる仕事と、残る仕事</h1>
+        <p class="a-lead">スマホカメラの画質を決める光学部材の話から、開発の流れのどこがAIに置き換わり、どこに人の判断が残るのかを整理します。台湾の大学で行った講義をもとにした解説です。</p>
+      </header>
+      <nav class="a-toc" aria-label="目次"><p class="a-toc__title">目次</p><ol><li><a href="#s1">目は中心だけが高精細、カメラは全面が均一</a></li><li><a href="#s2">画質を決めているのは、センサーの前後にある部材</a></li><li><a href="#s3">暗い場所でざらつくのは、光子の数が足りないから</a></li><li><a href="#s4">レンズ以外にも、透明な部材が働いている</a></li><li><a href="#s5">開発の流れの、どこにAIが入るのか</a></li><li><a href="#s6">これから技術を伸ばす人に必要な5つのこと</a></li><li><a href="#s7">まとめ</a></li></ol></nav>
+      <div class="a-body">
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>人の目と、スマートフォンのカメラ。解像度で比べると、どちらが優れているのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>画素数だけを並べると、カメラのほうが上に見えます。ただ、比べる軸を変えると結論が変わります。人の目は、網膜の中心にある中心窩（ちゅうしんか）というごく狭い範囲だけが高精細で、そこから視線が外れるほど見分ける力が急に落ちます。<mark>目の強みは画素数ではなく、必要なところへ注意を動かす制御にあります</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>言われてみると、視野の端はぼんやりしている気がします。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>それでも「全部はっきり見えている」と感じるのは、視線を動かしながら、脳が記憶と組み合わせて周辺を補っているからです。カメラはその逆で、画素は中心も周辺も同じ間隔で並び、性能は固定されています。だからカメラの画質は、光を集める部分の設計でほぼ決まります。その「光を集める部分」が、ここで取り上げる光学部材です。</p></div>
+<h2 id="s1">目は中心だけが高精細、カメラは全面が均一</h2>
+<figure class="a-figure"><img src="/articles/images/optics-engineer-ai-era-fovea.jpg" alt="人の目の断面図と、視野の中心だけが高精細に見えることを示した概念図" loading="lazy" decoding="async"><figcaption>中心窩の付近だけが高精細で、周辺では細部を見分ける力が落ちる（講義資料より）</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>中心窩というのは、網膜のどのあたりにあるものですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>視線の先が結ばれる、網膜のちょうど中心です。ここには細部を見分ける細胞が密に並んでいて、視野の中ではここだけが突出して高精細です。中心から角度が離れると、その力は連続的に落ちていきます。見ている一点の周囲だけが鮮明で、残りは「鮮明なつもりで見ている」状態に近いといえます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>カメラの画素の並び方とは、ずいぶん違いますね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>違います。イメージセンサーは同じ大きさの画素が格子状に固定され、中心も周辺も同じ密度です。均一であることは記録装置として大きな長所ですが、<mark>人の目のように「いま見たい場所へ性能を寄せる」ことはできません</mark>。その代わりに、レンズと部材の設計で全面の画質を底上げしていきます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>その設計が、画質の差になって出てくるわけですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そうです。センサーの性能表だけを見ていると、この部分が抜け落ちます。次は、光が実際にどこを通ってセンサーに届くのかを見ていきます。</p></div>
+<h2 id="s2">画質を決めているのは、センサーの前後にある部材</h2>
+<figure class="a-figure"><img src="/articles/images/optics-engineer-ai-era-lightpath.jpg" alt="撮像レンズ、IRカットフィルター、カバーガラスを経てマイクロレンズ・カラーフィルター・フォトダイオードへ光が届く経路を示した図" loading="lazy" decoding="async"><figcaption>光は複数の部材を通ってから画素に届く。どれか一つが合わないと画質に出る（講義資料より）</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>被写体から出た光は、どんな順番でセンサーまで届くのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>おおよそ、撮像レンズ、赤外線を抑えるIRカットフィルター、センサーを守るカバーガラス、画素の上に乗るマイクロレンズ、色を分けるカラーフィルター、そして光を電気に変えるフォトダイオードという順です。この一つひとつの段階で、透過・反射・屈折・回折・偏光といった現象が起きています。<mark>画質を決めているのはセンサーそのものというより、その前後にある部材です</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>どれか一つの設計を誤ると、どうなりますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>症状としては、画面の周辺が暗くなる、色が混ざる、余計な光が写り込む、場所によって色味が変わる、といった形で出ます。ゴーストやフレアもその一つで、レンズ面での反射が原因になります。詳しくは<a href="/articles/ghost-flare-basics/">ゴースト・フレアの正体</a>で扱っています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>画素の上に乗っているマイクロレンズは、何をしているのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>画素に届く光をフォトダイオードへ集める、小さなレンズの集まりです。ここで重要になるのが主光線角度（CRA）の合わせ込みで、レンズから出た光はセンサーの周辺画素には斜めに入ってきます。そこでマイクロレンズとカラーフィルターを、像の高さに応じて中心方向へずらしておきます。<mark>レンズ側のCRA特性とセンサー側のCRA仕様が合っていないと、そもそもカメラモジュールとして成立しません</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>部材ごとに別々の最適解がある、という話ではないのですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>全体で最適化しないと意味がない、という点が難しいところです。部材単体では良い値が出ていても、組み合わせると周辺の光量が落ちたり色がずれたりします。</p></div>
+<div class="box box--point"><p class="box__title">センサーの前後にある主な部材</p><ul><li>IRカットフィルター：人の目に見えない赤外線を抑え、色が転ぶのを防ぐ</li><li>カバーガラス：センサーを守りながら、反射・面精度・複屈折を管理する</li><li>マイクロレンズ：画素ごとに光を集め、斜めに入る光をCRAに合わせて導く</li><li>カラーフィルター：画素ごとに色を分ける。配列と分光特性が色の再現性を決める</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>次は、暗い場所で画がざらつく話をうかがえますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>はい。これは部材の良し悪しの前に、光そのものの性質から来ています。</p></div>
+<h2 id="s3">暗い場所でざらつくのは、光子の数が足りないから</h2>
+<figure class="a-figure"><img src="/articles/images/optics-engineer-ai-era-shotnoise.jpg" alt="光子数が100のときと400のときの夜景を比べ、SNRが2倍になる関係を示した図" loading="lazy" decoding="async"><figcaption>光子の数が4倍になると、信号対雑音比は2倍になる（講義資料より）</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>暗いところで撮るとノイズが出るのは、センサーの性能が足りないからでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>性能の差もありますが、根っこにあるのは物理的な現象です。光は粒として届くので、同じ明るさでも届く数は毎回ゆらぎます。浜松ホトニクスの技術資料では、このゆらぎを光ショットノイズと呼び、その大きさは「光ショットノイズ=√信号」と説明されています。<mark>ノイズは信号の平方根に比例して増えるので、信号が増えるほどノイズの割合は相対的に小さくなります</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>信号を増やすと、どのくらい良くなりますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>信号対雑音比は信号を平方根で割った形になるため、光の量を4倍にして、ようやく2倍の改善です。センサーの受光面やレンズの口径、露光時間は、どれも集められる光の量に効いてきます。暗い場所でスマートフォンが不利になるのは、ここに理由があります。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">条件</th><th scope="col">集められる光</th><th scope="col">信号対雑音比</th></tr></thead><tbody><tr><td>基準</td><td>1</td><td>1</td></tr><tr><td>光の量を4倍にする</td><td>4</td><td>2</td></tr><tr><td>光の量を16倍にする</td><td>16</td><td>4</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>物理法則そのものは変えられない、ということですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>変えられません。だから各社は、集光効率と枚数で勝負しています。裏面照射構造や隙間のないマイクロレンズで光を取りこぼさないようにする、隣の画素への漏れ込みを深い溝で抑える、複数の画素をまとめて実質的な受光面を広げる、複数枚を重ねてノイズを平均化する、といった対策です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>画素をまとめる、というのは具体的にどういう処理でしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>隣り合う画素を束ねて一つの大きな画素として扱う処理です。Samsungが2022年に発表したISOCELL HP3の資料では、4つの画素を1つにまとめることで、0.56μmの画素を1.12μmの画素として扱い、16画素をまとめれば2.24μmの画素として扱えると説明されています。<mark>暗い場所では画素をまとめて感度を取り、明るい場所では元の配列に戻して解像度を取る</mark>という使い分けです。</p></div>
+<div class="box box--warn"><p class="box__title">画素を小さくすれば良いわけではない</p><ul><li>1画素あたりが受け取る光子の数は減るため、暗所では不利になります</li><li>隣の画素への漏れ込み（クロストーク）が増え、色が混ざりやすくなります</li><li>0.56μm級になると、可視光の波長と同じ桁に近づき、回折の影響が無視できなくなります</li><li>微細化そのものより、画素の質と読み出し方が競争の軸になってきました</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>小さくするメリットもあるから、各社は取り組んでいるわけですよね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そうです。同じ資料では、前の世代の0.64μmから12%小さくして1/1.4インチの光学サイズに2億画素を収め、カメラモジュールの面積をおよそ20%減らせると説明されています。薄い本体に収めるという要求と、画質の要求の間で、どこを取るかという設計判断が常にあります。</p></div>
+<h2 id="s4">レンズ以外にも、透明な部材が働いている</h2>
+<figure class="a-figure"><img src="/articles/images/optics-engineer-ai-era-prism.jpg" alt="プリズムで光路を直角に折り曲げ、レンズをスマートフォンの長さ方向に並べる構造の概念図" loading="lazy" decoding="async"><figcaption>プリズムで光路を折り曲げると、厚みではなく長さ方向にレンズを並べられる（講義資料より）</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>スマートフォンが薄いまま望遠を実現しているのは、どういう仕組みですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>屈曲光学、いわゆるペリスコープ構造です。プリズムで光路を直角に折り曲げ、レンズを厚み方向ではなく長さ方向に並べます。<mark>光学系の長さを本体の厚みから切り離す発想で、薄い筐体のまま焦点距離を稼げます</mark>。ここで働いているのは、屈折と全反射という、透明な部材の性質です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>レンズ以外にも、そうした部材があるのですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>透明でありながら特定の機能を持つ部材は、ほかにもあります。光学フィルム、波長板、拡散板、プリズム、カバーガラス、IRカットフィルターの6つが代表的です。共通するのは、特定の波長・偏光・方向の光だけを、設計の意図どおりに操作するという点です。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">部材</th><th scope="col">役割</th><th scope="col">主な用途</th></tr></thead><tbody><tr><td>光学フィルム</td><td>多層膜の干渉で特定の波長を通す・止める</td><td>帯域フィルター、反射防止、偏光</td></tr><tr><td>波長板</td><td>偏光の位相をずらす</td><td>偏光イメージング、プロジェクター、AR/VR</td></tr><tr><td>拡散板</td><td>光を均一にする、配光を整える</td><td>バックライト、測距用の照明、スクリーン</td></tr><tr><td>プリズム</td><td>光路を折る、分ける、戻す</td><td>屈曲光学、分光、偏光分離</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>材料の選び方にも違いがありますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>材料で特性がほぼ決まります。ガラス系は耐熱性と低複屈折に優れ、合成石英は紫外線まで通します。樹脂系は成形による量産に向く一方、吸湿や複屈折の課題があります。結晶系は旋光性や複屈折そのものを利用します。<mark>どれが優れているかではなく、要求される波長・入射角・環境条件に対してどれが合うか</mark>という選び方になります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>こうした部材は、どのように作られていくのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>設計、試作、評価、量産という流れで進みます。この流れのどこにAIが入ってくるのかが、ここから先の話です。</p></div>
+<h2 id="s5">開発の流れの、どこにAIが入るのか</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>光学部材の開発は、どんな手順で進むのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>大きく4つの段階に分かれます。それぞれの段階で、やっていることの性質がかなり違います。</p></div>
+<div class="box box--steps"><p class="box__title">手順</p><ol><li>設計：膜の構成や配光を決め、公差を配分し、熱や応力の影響を計算する</li><li>試作：成膜、加工、成形、貼り合わせで、実物を作る</li><li>評価：分光測定、干渉計による面精度の測定、複屈折の測定、環境試験を行う</li><li>量産：工程能力を管理し、外観検査を回し、歩留まりを改善する</li></ol></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>この中で、AIに置き換わりやすいのはどの部分でしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>定型的な検査や測定、そしてシミュレーションの一部です。外観検査の判定、測定データの異常検知、設計候補の絞り込みは、データが貯まるほど速度と精度が上がっていきます。<mark>手順が決まっていて、正解の形が定義できる作業ほど、置き換えは速く進みます</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>逆に、人のほうに残るのはどこですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>公差をどこに配るかという設計判断、現場で異常の兆候に気づく感覚、サプライヤーとの信頼関係の構築です。たとえば量産では、膜の応力で基板が反る、ロットによって分光特性がずれる、大口径で膜厚が均一にならない、といった問題が必ず出ます。<mark>何が起きているかを自分の目で見て、正しくデータの形にできる人が、これからの前提になります</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>データにする、という部分が鍵なのですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>測定の相関が取れていないデータをいくら集めても、判断の材料になりません。同じサンプルを双方で測って数値が合うかどうかは、サプライヤー選定でも最重要の確認項目です。ここが合わないと、そもそも議論が成り立ちません。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">段階</th><th scope="col">AIの速度が上がりやすい作業</th><th scope="col">人の判断が残りやすい作業</th></tr></thead><tbody><tr><td>設計</td><td>候補の絞り込み、過去事例の検索</td><td>公差の配り方、どこを捨てるかの判断</td></tr><tr><td>試作</td><td>条件出しの整理</td><td>現場の段取り、異常の兆候への気づき</td></tr><tr><td>評価</td><td>測定データの異常検知</td><td>測定方法そのものの妥当性の確認</td></tr><tr><td>量産</td><td>外観検査、歩留まりの傾向分析</td><td>真因の特定、取引先との交渉と合意</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>日本の企業は、こうした変化に追いつけているのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>情報処理推進機構（IPA）の調査では、日本企業の85.1%でDXを推進する人材が不足しているという結果が出ています。技術そのものより、使いこなす人が足りていない状況です。<mark>裏を返せば、現場を理解したうえでAIを使える人の価値は、これから上がっていきます</mark>。</p></div>
+<h2 id="s6">これから技術を伸ばす人に必要な5つのこと</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>光学の分野を目指す学生に向けて、伝えるとしたら何になりますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>5つあります。どれも特別な話ではなく、順番に積み上げられるものです。</p></div>
+<div class="box box--point"><p class="box__title">これから技術を伸ばす人への5つの提案</p><ul><li>深い専門を1つ持つ：それが分野・国・文化を越えるときの通行証になります</li><li>現場と実測を大切にする：シミュレーションは実測で校正して、はじめて武器になります</li><li>AIを使いこなす：単純な作業ほど人の手を離れていきます。使う側に回ることが前提になります</li><li>小さく速く試す：完璧な計画より、速い試作と修正のほうが価値を持ちます</li><li>語学と人のつながり：技術と越境する力を兼ね備えた人材は、どの国でも不足しています</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>「深い専門を1つ」というのは、広く手を出すなという意味でしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>広く知ることは必要です。ただ、入り口が広いだけでは信頼につながりません。一つ深く掘った経験があると、別の分野に移ったときにも「どこまで調べれば答えに届くか」の感覚が働きます。<mark>深さの経験は、分野を変えても持ち運べます</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>実測を大切に、というのは、どういう場面で効いてきますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>シミュレーションの数値と実測が合わないときです。そこで逃げずに原因を追うと、モデルに入れていなかった前提が見つかります。その積み重ねがないまま計算だけを信じると、量産で足をすくわれます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>AIの使い方で、意識しておくとよいことはありますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>出てきた答えを検証できるだけの土台を、自分の中に持っておくことです。判断の責任は人の側に残るので、間違いに気づける力がそのまま価値になります。<mark>AIを含めて、使えるものを最大限に使い、てこを効かせられる人が強い</mark>という考え方は、独立して仕事をするうえでも同じです。</p></div>
+<h2 id="s7">まとめ</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>画質を決めているのはセンサーの前後にある部材で、暗所のノイズは光の量という物理に支配されている。そして開発の流れの中では、定型的な検査や測定からAIに置き換わっていく、ということですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そのとおりです。残るのは、公差をどう配るかという判断、現場で異常に気づく感覚、そして人と人の信頼関係です。<mark>どこがAIに置き換わり、どこに人の価値が残るのかを、早いうちから考えておくこと</mark>が、これから技術を身につける人にとって大きな差になります。この内容は、2026年10月に台湾の国立陽明交通大学 光電学院で行った講義をもとにしています。NWでは、日本・中国・台湾の光学分野で企業と企業をつなぐ<a href="/agent/">NW agent</a>という紹介サービスを行っています。</p></div>
+      </div>
+      <section class="a-faq" aria-labelledby="faq-h"><h2 id="faq-h">よくある質問</h2><details><summary>人の目とカメラでは、どちらの解像度が高いのですか</summary><p>比べる軸によって変わります。人の目は網膜の中心にある中心窩の付近だけが高精細で、周辺では細部を見分ける力が落ちます。カメラは中心も周辺も同じ密度で画素が並ぶ代わりに、見たい場所へ性能を寄せることはできません。</p></details><details><summary>暗い場所で写真がざらつくのはなぜですか</summary><p>光が粒として届くため、届く数が毎回ゆらぐからです。浜松ホトニクスの技術資料では、このゆらぎを光ショットノイズと呼び、その大きさは信号の平方根で決まると説明されています。信号対雑音比を2倍にするには、光の量を4倍にする必要があります。</p></details><details><summary>画素を小さくすると画質は良くなりますか</summary><p>一概には良くなりません。同じセンサー面積でより多くの画素を並べられる一方、1画素が受け取る光子の数は減り、隣の画素への漏れ込みも増えます。そのため暗い場所では複数の画素をまとめて使うなどの対策が取られています。</p></details><details><summary>光学部材の開発で、AIに置き換わりやすいのはどの作業ですか</summary><p>定型的な外観検査や測定データの異常検知、設計候補の絞り込みなど、手順が決まっていて正解の形を定義できる作業です。公差の配り方の判断や、現場で異常の兆候に気づくこと、取引先との信頼関係の構築は人の側に残ります。</p></details><details><summary>スマートフォンが薄いまま望遠を実現できるのはなぜですか</summary><p>プリズムで光路を直角に折り曲げる屈曲光学（ペリスコープ構造）を使っているためです。レンズを厚み方向ではなく長さ方向に並べることで、薄い筐体のまま焦点距離を確保しています。</p></details></section>
+      <section class="a-sources" aria-labelledby="src-h"><h2 id="src-h">出典・参考資料</h2><ol><li><a href="https://camera.hamamatsu.com/jp/ja/learn/technical_information/thechnical_guide/photon_shot_noise.html" target="_blank" rel="noopener">光ショットノイズとはなんですか？</a></li><li><a href="https://camera.hamamatsu.com/jp/ja/learn/technical_information/thechnical_guide/calculating_snr.html" target="_blank" rel="noopener">SNR（Signal-to-Noise Ratio）の計算方法</a></li><li><a href="https://semiconductor.samsung.com/news-events/news/samsung-unveils-isocell-image-sensor-with-industrys-smallest-0-56um-pixel/" target="_blank" rel="noopener">Samsung Unveils ISOCELL Image Sensor with Industry&#x27;s Smallest 0.56μm Pixel</a></li><li><a href="https://www.ipa.go.jp/digital/chousa/discussion-paper/dx2025_digital_talent_ai_era.html" target="_blank" rel="noopener">DX動向2025 - AI時代のデジタル人材育成</a></li></ol></section>
+      <p class="a-note">この記事は Corporation NW 編集部が、公開されている資料をもとに AI を使って作成し、出典を確認したうえで掲載しています。対話の登場人物は、説明のための設定です。</p>
+      <aside class="a-cta"><span class="eyebrow">Corporation NW</span><p class="a-cta__name">NW agent</p><p>日本・中国・台湾の光学ビジネスをつなぐマッチングサービスです。</p><a class="btn btn--solid" href="/agent/">NW agentを見る</a></aside>
+      <section class="a-more" aria-labelledby="more-h"><h2 id="more-h">ほかの記事</h2><ul class="a-cards"><li class="a-card"><a href="/articles/anti-reflection-coating-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-09-28">2026年9月28日</time></span><span class="a-card__title">反射防止コーティングのしくみ｜屈折率と多層膜の基本</span><span class="a-card__desc">レンズの表面反射はなぜ起きるのか。屈折率の差と光の干渉から、単層膜・多層膜の反射防止コーティングの原理を、出典つきの数値で解説します。</span></a></li><li class="a-card"><a href="/articles/autumn-leaves-smartphone-kawaguchiko/"><span class="a-meta"><span class="a-cat">活用ガイド</span><time datetime="2026-09-27">2026年9月27日</time></span><span class="a-card__title">スマホで撮る紅葉のコツ｜河口湖もみじ回廊の作例で解説</span><span class="a-card__desc">河口湖もみじ回廊で撮った作例写真を見ながら、逆光の使い方、見上げる構図、望遠で富士山と重ねる方法、水面や落ち葉の撮り方を解説します。見頃の時期とライトアップの時間も紹介。</span></a></li><li class="a-card"><a href="/articles/ghost-flare-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-09-21">2026年9月21日</time></span><span class="a-card__title">ゴースト・フレアの正体｜レンズ内反射の原因と抑える技術</span><span class="a-card__desc">スマホや車載カメラの写りを乱すゴースト・フレアはなぜ起きるのか。レンズ内反射の仕組みと、反射防止コーティング・遮光インキによる対策の考え方を対話でわかりやすく解説します。</span></a></li></ul></section>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="logo__en">Corporation NW</span>
+        <span>有限会社シン・ワールド</span>
+        <address lang="ja">〒231-0062 神奈川県横浜市中区桜木町2-2<br>港陽ビル THE CODE 横浜 4階</address>
+      </div>
+      <nav class="footer-nav" aria-label="フッターメニュー">
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">COMPANY</span>
+          <a href="/#vision">ビジョン</a>
+          <a href="/#message">CEOメッセージ</a>
+          <a href="/#company">会社概要</a>
+          <a href="/#offices">拠点</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">PRODUCTS</span>
+          <a href="/#products">GLC</a>
+          <a href="/#products">HD6</a>
+          <a href="/articles/">コラム</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">BUSINESSES</span>
+          <a href="/mobile/">NW Mobile</a>
+          <a href="/agent/">NW agent</a>
+          <a href="/tonaritabi/">となり旅</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <nav aria-label="サイト情報">
+        <a href="/#contact">お問い合わせ</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </nav>
+      <small>© 2026 Corporation NW</small>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
