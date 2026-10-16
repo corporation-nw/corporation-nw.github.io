@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="N0MdC7l9ra_Mr8z7GULf4NwQdhKX47hE5YBFVFnXuj8" />
+  <title>Co-Packaged Optics とは｜光をチップの隣まで近づける理由 ｜ Corporation NW</title>
+  <meta name="description" content="データセンターのスイッチで進む CPO（光電融合）を、なぜ必要になったのか、何が難しいのか、光学部材の作り手に何が求められるのかの順に解説します。">
+  <link rel="canonical" href="https://cnw2026.com/articles/co-packaged-optics-basics/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Co-Packaged Optics とは｜光をチップの隣まで近づける理由 ｜ Corporation NW">
+  <meta property="og:description" content="データセンターのスイッチで進む CPO（光電融合）を、なぜ必要になったのか、何が難しいのか、光学部材の作り手に何が求められるのかの順に解説します。">
+  <meta property="og:url" content="https://cnw2026.com/articles/co-packaged-optics-basics/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#06070b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Shippori+Mincho:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/article.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "Co-Packaged Optics とは｜光をチップの隣まで近づける理由", "description": "データセンターのスイッチで進む CPO（光電融合）を、なぜ必要になったのか、何が難しいのか、光学部材の作り手に何が求められるのかの順に解説します。", "datePublished": "2026-10-17", "dateModified": "2026-10-17", "inLanguage": "ja", "mainEntityOfPage": "https://cnw2026.com/articles/co-packaged-optics-basics/", "author": {"@type": "Organization", "name": "Corporation NW 編集部"}, "publisher": {"@type": "Organization", "name": "有限会社シン・ワールド（Corporation NW）", "url": "https://cnw2026.com/"}, "image": ["https://cnw2026.com/articles/images/co-packaged-optics-basics-layout.jpg", "https://cnw2026.com/articles/images/co-packaged-optics-basics-engine.jpg"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "CPO（Co-Packaged Optics）とは何ですか", "acceptedAnswer": {"@type": "Answer", "text": "スイッチの半導体チップのすぐ隣に、電気と光を変換する光エンジンを同じパッケージとして載せる技術です。日本語では光電融合と呼ばれることもあります。装置の前面に挿すプラガブル光トランシーバーに代わる方式として開発が進んでいます。"}}, {"@type": "Question", "name": "CPO にすると、どのくらい電力が下がるのですか", "acceptedAnswer": {"@type": "Answer", "text": "NVIDIA の技術資料では、インターフェースあたり30W程度だった消費電力が9Wまで下がり、電力効率は以前の構成と比べて3.5倍になると説明されています。Broadcom は、自社の51.2テラビット毎秒のスイッチで、光の接続にかかる電力がプラガブルと比べて70%低いとしています。"}}, {"@type": "Question", "name": "なぜ今、CPO が注目されているのですか", "acceptedAnswer": {"@type": "Answer", "text": "生成AI向けのクラスターでは、プラガブル光トランシーバーがシステム電力のおよそ50%、コストの半分以上を占めるとされています。計算する側の性能が上がるほど、つなぐ側の電力と費用が全体の足かせになるためです。"}}, {"@type": "Question", "name": "CPO のデメリットは何ですか", "acceptedAnswer": {"@type": "Answer", "text": "不良が出た光の部分だけを抜いて交換することが難しくなります。また、発熱するスイッチチップの隣に温度に敏感な光部品を置くため熱の設計が難しく、高価なチップと光エンジンを同じパッケージに載せるぶん、どちらか一方の不良が全体の損失になります。"}}, {"@type": "Question", "name": "日本では CPO に関する動きはありますか", "acceptedAnswer": {"@type": "Answer", "text": "NTT が光電融合として取り組んでいます。研究所の記事では、第2世代デバイス PEC-2 が1台あたり32チャネル・合計3.2テラビット毎秒を扱い、消費電力12Wの従来型トランシーバー8台分に比べて48Wと半分に抑えられると説明されています。"}}]}</script>
+</head>
+<body class="a-page">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="a-header">
+  <div class="a-header__inner">
+    <a class="logo" href="/">
+      <span class="logo__en">Corporation NW</span>
+      <span class="logo__ja">有限会社シン・ワールド</span>
+    </a>
+    <nav class="a-header__nav" aria-label="メインメニュー">
+      <a class="a-hide-sp" href="/#products">製品・サービス</a>
+      <a class="a-hide-sp" href="/#business">事業</a>
+      <a href="/articles/">コラム</a>
+      <a class="a-header__cta" href="/#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="a-main">
+  <article class="a-article">
+    <div class="a-wrap">
+      
+      <nav class="a-crumbs" aria-label="パンくずリスト"><a href="/">ホーム</a><span aria-hidden="true">/</span><a href="/articles/">コラム</a></nav>
+      <header class="a-head">
+        <p class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-10-17">2026年10月17日</time></p>
+        <h1>Co-Packaged Optics とは｜光をチップの隣まで近づける理由</h1>
+        <p class="a-lead">データセンターのスイッチで進む CPO（光電融合）を、なぜ必要になったのか、何が難しいのか、光学部材の作り手に何が求められるのかの順に解説します。</p>
+      </header>
+      <nav class="a-toc" aria-label="目次"><p class="a-toc__title">目次</p><ol><li><a href="#s1">プラガブルから CPO へ、何が変わるのか</a></li><li><a href="#s2">電気で運ぶ限界が、光を内側へ呼び込んだ</a></li><li><a href="#s3">1つの光エンジンに、数百点の光学部品</a></li><li><a href="#s4">現場で何が難しいのか</a></li><li><a href="#s5">日本・中国・台湾の、それぞれの役割</a></li><li><a href="#s6">まとめ</a></li></ol></nav>
+      <div class="a-body">
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>データセンターの世界で CPO という言葉をよく見かけるようになりました。これは何の略でしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>Co-Packaged Optics の略で、日本語では光電融合と呼ばれることもあります。スイッチの半導体チップのすぐ隣に、光と電気を変換する部品を同じパッケージに載せてしまう技術です。<mark>これまで装置の前面に挿していた光モジュールを、チップの横まで引っ越させる</mark>、と考えると分かりやすいかもしれません。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>なぜ、わざわざ引っ越させる必要があるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>電気の信号を基板の上で長く引き回すのが、速度の面でも電力の面でも限界に近づいてきたからです。通信の速度が上がるほど、配線を通るあいだに信号は弱くなり、それを補うための回路が電力を食います。光学の部材を作る側から見ると、この変化は仕事の中身が変わることを意味します。順番に見ていきます。</p></div>
+<h2 id="s1">プラガブルから CPO へ、何が変わるのか</h2>
+<figure class="a-figure"><img src="/articles/images/co-packaged-optics-basics-layout.jpg" alt="スイッチの半導体チップと光モジュールの位置関係を、装置前面に挿す従来方式とチップの隣に置く方式で比べた図" loading="lazy" decoding="async"><figcaption>従来は装置の前面、CPO ではスイッチチップのすぐ隣で光に変える</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>これまでの方式は、どういう形だったのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>プラガブル光トランシーバーと呼ばれる、抜き差しできる光モジュールを装置の前面に並べる形です。スイッチの半導体チップから出た電気信号は、基板の配線とコネクタを通って前面まで運ばれ、そこで初めて光に変わります。<mark>この「運ぶ距離」が、速度を上げるほど重たくなってきました</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>距離が問題になるというのは、どのくらいの影響なのでしょう。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>NVIDIA の技術資料では、200ギガビット毎秒のチャネルで最大22 dB の電気的な損失が生じると説明されています。信号が目減りするぶん、送る側で強く押し出し、受ける側で整える必要があります。CPO にしてチップの隣で光に変えると、この損失はおよそ4 dB まで下がるとされています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>損失が減ると、何が良くなるのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>補正のための回路が小さくて済み、電力が下がります。同じ資料では、インターフェースあたり30W ほどだった消費電力が9W まで下がり、<mark>以前の構成と比べて電力効率は3.5倍になる</mark>と説明されています。信号の品質は64倍、故障しうる光部品の数が減ることで信頼性は10倍という数字も挙げられています。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">比べる点</th><th scope="col">プラガブル光トランシーバー</th><th scope="col">Co-Packaged Optics</th></tr></thead><tbody><tr><td>光に変える場所</td><td>装置の前面</td><td>スイッチチップのすぐ隣</td></tr><tr><td>電気の損失（200Gb/s）</td><td>最大22 dB</td><td>およそ4 dB</td></tr><tr><td>インターフェースあたりの電力</td><td>30W 程度</td><td>9W まで</td></tr><tr><td>抜き差し</td><td>できる</td><td>基本的にできない</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>抜き差しできないのは、運用する側にとっては不安がありそうです。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そこは後で触れます。まず、なぜここまでして光を近づけるのか、その事情を見ておきます。</p></div>
+<h2 id="s2">電気で運ぶ限界が、光を内側へ呼び込んだ</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>AI 向けのデータセンターが増えたことと、関係があるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>大きく関係しています。Broadcom の発表では、生成 AI のクラスターでは光の接続が前段のネットワークでも後段でも欠かせず、<mark>プラガブル光トランシーバーがシステム全体の電力のおよそ50%、コストの半分以上を占める</mark>と説明されています。GPU が増え、1台あたりの帯域が上がるほど、この割合は効いてきます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>つまり、通信そのものより、通信を支える部分が重くなっているということですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そのとおりです。計算する側をいくら速くしても、つなぐ側が電力と費用を食い続けると、全体としては割に合わなくなります。だから各社は、電気で運ぶ区間をできるだけ短くして、早い段階で光に移そうとしています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>実際の製品は、どのくらいの規模のものですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>Broadcom が2024年3月に顧客への出荷を発表した Bailly は、毎秒51.2テラビットのイーサネットスイッチです。6.4テラビットのシリコンフォトニクス光エンジンを8個、スイッチチップと組み合わせた構成で、<mark>光の接続にかかる電力はプラガブルと比べて70%低く、シリコンの面積効率は8倍</mark>と説明されています。</p></div>
+<div class="box box--point"><p class="box__title">CPO が狙っているもの</p><ul><li>電力：補正回路を減らし、接続あたりの消費電力を下げる</li><li>面積：装置前面のスペースに縛られず、帯域を増やせる</li><li>信号：経路が短くなり、品質が保ちやすくなる</li><li>費用：部品点数と電力の両面で、運用の負担を軽くする</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>日本でも同じ流れがあるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>NTT が進めている光電融合が、まさにこの領域です。研究所の記事では、第2世代のデバイス PEC-2 について、1台あたり32チャネル、合計3.2テラビット毎秒の帯域を扱えると説明されています。消費電力12W の従来型トランシーバー8台分に比べ、<mark>48W と半分に抑えられる</mark>という数字も挙げられています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>日本の技術が、世界の流れの中に入っているのですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>同じ記事では、6.4テラビット毎秒の PEC-2 を毎秒102.4テラビットのスイッチチップに実装し、従来のスイッチ装置と比べて50%の電力削減を目指す、という開発の方向も示されています。ここから先は、部材を作る側の話に移ります。</p></div>
+<h2 id="s3">1つの光エンジンに、数百点の光学部品</h2>
+<figure class="a-figure"><img src="/articles/images/co-packaged-optics-basics-engine.jpg" alt="光エンジンの内部で、レーザー光がレンズとアイソレータを通り、光導波路からファイバーへ結合されていく経路の図" loading="lazy" decoding="async"><figcaption>光エンジンの内部では、光源からファイバーまでを光学部品がつないでいる</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>光エンジンというのは、中に何が入っているのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>Broadcom の説明では、Bailly の光エンジン1つに数百点の光学部品と数億個のトランジスタが集積されています。光源、電気と光を変換する素子、波長を合成・分離する部分、そしてファイバーへ光を導く結合部まで、まとめて1つの小さな部品に収まっています。<mark>光学部品が「装置に取り付ける部品」から「半導体の中に組み込む部品」へ移っている</mark>のが、この分野の大きな変化です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>組み込む部品になると、何が変わるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>求められる精度の桁が変わります。光導波路とファイバーの結合では、位置がわずかにずれるだけで光の量が落ちます。Broadcom は、端面で結合するファイバー取り付けを高度に自動化した製造方法によって量産を可能にした、と説明しています。<mark>精度を職人の手ではなく、工程の設計で担保する</mark>という発想です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>光学部材の作り手には、どんな要求が来るのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>波長ごとの透過率や反射率に加えて、半導体の工程に耐えるかどうかが問われます。実装のときの温度、樹脂や接着剤から出るガス、微細な異物、そして長期間の信頼性です。どれも、カメラ向けの部材で積み上げてきた考え方と地続きです。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">要求される点</th><th scope="col">具体的に見られること</th></tr></thead><tbody><tr><td>光学特性</td><td>使う波長での透過率と反射率、迷光の抑え方</td></tr><tr><td>寸法と位置</td><td>結合部の位置ずれ、面の精度、角度の公差</td></tr><tr><td>環境への耐性</td><td>実装時の熱、高温高湿、長期の安定性</td></tr><tr><td>清浄度</td><td>異物、欠陥の大きさの基準、内部が曇る原因になるガス</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>組み上がった光エンジンの良し悪しは、どうやって確かめるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>中を直接のぞけないので、光を入れて出てくる量や波形で判断します。ここで効いてくるのが、測る側と作る側で数値がそろっているかどうかです。<mark>同じサンプルを双方で測って値が合わない状態では、良品と不良品の線引きそのものが成り立ちません</mark>。測定の条件をそろえる作業は地味ですが、量産の立ち上げでは最初にぶつかる壁です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>不良が見つかったときは、どう進めるのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>どの工程で生まれたのかを切り分けていきます。光源なのか、結合部の位置ずれなのか、実装のときの熱や応力なのか。原因が特定できたら、同じ条件で作った製品すべてに水平展開して確認します。部品が一体化しているぶん、切り分けの手間は増えます。</p></div>
+<div class="box box--warn"><p class="box__title">「光学部品が減る」わけではない</p><ul><li>CPO では装置の前面に並ぶモジュールの数は減りますが、1つの光エンジンの中に入る光学部品は増えています</li><li>外から見える部品が減るぶん、中の部品には交換できない前提の信頼性が求められます</li><li>量産では、特性の良し悪しよりも「ばらつきの小ささ」で採否が決まる場面が増えます</li></ul></div>
+<h2 id="s4">現場で何が難しいのか</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>技術として難しいのは、どのあたりでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>4つに整理できます。1つ目は熱です。発熱するスイッチチップのすぐ隣に、温度で特性が変わる光の部品を置くことになります。2つ目は結合で、光導波路とファイバーの位置合わせを量産の速度で繰り返す必要があります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>残りの2つは何ですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>3つ目は保守です。プラガブルなら不良のモジュールだけ抜いて替えられますが、CPO では簡単にいきません。4つ目は歩留まりで、高価なスイッチチップと光エンジンを同じパッケージに載せるため、どちらか一方の不良が全体の損失になります。<mark>一体化で得をする部分と、一体化で失う自由度の、その差し引きで採用が決まります</mark>。</p></div>
+<div class="box box--steps"><p class="box__title">手順</p><ol><li>スイッチチップと光エンジンを同じ基板の上に配置する</li><li>光導波路とファイバーの位置を合わせ、端面で結合する</li><li>光源からの光を安定して供給する（外に出す構成もある）</li><li>熱の逃げ道を設計し、温度による特性の変化を抑える</li><li>不良が出たときの切り分けと、交換の手順を決めておく</li></ol></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>光源を外に出す、というのはどういうことでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>レーザーは熱に弱く、寿命の面でも弱点になりやすい部品です。そこで光源だけをパッケージの外に置き、光ファイバーで中へ導く構成が取られることがあります。交換しやすくなる一方で、導く経路での損失や、戻り光を抑える部品が新たに要ります。どちらの構成にも一長一短があります。</p></div>
+<h2 id="s5">日本・中国・台湾の、それぞれの役割</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>この分野では、どの地域が強いのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>役割が分かれています。日本は材料と、光源や受光素子の周辺に強みがあり、NTT の光電融合のように研究から製品化へ進めている例もあります。台湾は半導体の後工程と実装の層が厚く、スイッチチップと光エンジンを1つのパッケージにまとめる工程が得意です。中国は量産の規模と、部材の価格競争力を持っています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>1つの国で完結しない、ということですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>完結しません。だからこそ、どこで何を作り、どこで組み上げるかの設計が重要になります。<mark>部材の仕様を決める段階で、実装する側の工程を知らないと、量産に入ってから手戻りが起きます</mark>。測定の方法と基準を、取引先とそろえておくことも欠かせません。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>カメラ向けの部材を作ってきた会社にも、関わる余地はありますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>あります。波長ごとの設計、反射の抑え方、異物と欠陥の管理、量産でのばらつきの詰め方は、分野が変わっても共通しています。扱う波長と要求精度は違いますが、考え方の土台は同じです。</p></div>
+<h2 id="s6">まとめ</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>CPO は、電気で運ぶ距離を短くするために光をチップの隣まで近づける技術で、電力とコストの問題が背景にある。そして光学部品は、装置に取り付けるものから半導体に組み込むものへ変わりつつある、ということですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そのとおりです。<mark>外から見える光学部品は減っても、中で求められる精度と信頼性は上がっています</mark>。カメラの分野で積み上げてきた、波長ごとの設計や異物の管理、ばらつきを抑える工程の考え方は、この領域でも通用します。NW では、低反射コーティングや遮光インキといった光学部材を扱っています。くわしくは<a href="/#products">製品・サービス</a>をご覧ください。</p></div>
+      </div>
+      <section class="a-faq" aria-labelledby="faq-h"><h2 id="faq-h">よくある質問</h2><details><summary>CPO（Co-Packaged Optics）とは何ですか</summary><p>スイッチの半導体チップのすぐ隣に、電気と光を変換する光エンジンを同じパッケージとして載せる技術です。日本語では光電融合と呼ばれることもあります。装置の前面に挿すプラガブル光トランシーバーに代わる方式として開発が進んでいます。</p></details><details><summary>CPO にすると、どのくらい電力が下がるのですか</summary><p>NVIDIA の技術資料では、インターフェースあたり30W程度だった消費電力が9Wまで下がり、電力効率は以前の構成と比べて3.5倍になると説明されています。Broadcom は、自社の51.2テラビット毎秒のスイッチで、光の接続にかかる電力がプラガブルと比べて70%低いとしています。</p></details><details><summary>なぜ今、CPO が注目されているのですか</summary><p>生成AI向けのクラスターでは、プラガブル光トランシーバーがシステム電力のおよそ50%、コストの半分以上を占めるとされています。計算する側の性能が上がるほど、つなぐ側の電力と費用が全体の足かせになるためです。</p></details><details><summary>CPO のデメリットは何ですか</summary><p>不良が出た光の部分だけを抜いて交換することが難しくなります。また、発熱するスイッチチップの隣に温度に敏感な光部品を置くため熱の設計が難しく、高価なチップと光エンジンを同じパッケージに載せるぶん、どちらか一方の不良が全体の損失になります。</p></details><details><summary>日本では CPO に関する動きはありますか</summary><p>NTT が光電融合として取り組んでいます。研究所の記事では、第2世代デバイス PEC-2 が1台あたり32チャネル・合計3.2テラビット毎秒を扱い、消費電力12Wの従来型トランシーバー8台分に比べて48Wと半分に抑えられると説明されています。</p></details></section>
+      <section class="a-sources" aria-labelledby="src-h"><h2 id="src-h">出典・参考資料</h2><ol><li><a href="https://developer.nvidia.com/blog/scaling-ai-factories-with-co-packaged-optics-for-better-power-efficiency" target="_blank" rel="noopener">Scaling AI Factories with Co-Packaged Optics for Better Power Efficiency</a></li><li><a href="https://www.broadcom.com/company/news/product-releases/61946" target="_blank" rel="noopener">Broadcom Delivers Industry&#x27;s First 51.2-Tbps Co-Packaged Optics Ethernet Switch Platform for Scalable AI Systems</a></li><li><a href="https://www.rd.ntt/research/JN202602_38182.html" target="_blank" rel="noopener">PEC-2を搭載した大容量・低消費電力な光電融合スイッチ</a></li></ol></section>
+      <p class="a-note">この記事は Corporation NW 編集部が、公開されている資料をもとに AI を使って作成し、出典を確認したうえで掲載しています。対話の登場人物は、説明のための設定です。</p>
+      <aside class="a-cta"><span class="eyebrow">Corporation NW</span><p class="a-cta__name">製品・サービス</p><p>GLC・HD6 と取扱技術、業務内容をご紹介しています。</p><a class="btn btn--solid" href="/#products">製品・サービスを見る</a></aside>
+      <section class="a-more" aria-labelledby="more-h"><h2 id="more-h">ほかの記事</h2><ul class="a-cards"><li class="a-card"><a href="/articles/anti-reflection-coating-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-09-28">2026年9月28日</time></span><span class="a-card__title">反射防止コーティングのしくみ｜屈折率と多層膜の基本</span><span class="a-card__desc">レンズの表面反射はなぜ起きるのか。屈折率の差と光の干渉から、単層膜・多層膜の反射防止コーティングの原理を、出典つきの数値で解説します。</span></a></li><li class="a-card"><a href="/articles/ghost-flare-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-09-21">2026年9月21日</time></span><span class="a-card__title">ゴースト・フレアの正体｜レンズ内反射の原因と抑える技術</span><span class="a-card__desc">スマホや車載カメラの写りを乱すゴースト・フレアはなぜ起きるのか。レンズ内反射の仕組みと、反射防止コーティング・遮光インキによる対策の考え方を対話でわかりやすく解説します。</span></a></li><li class="a-card"><a href="/articles/optics-engineer-ai-era/"><span class="a-meta"><span class="a-cat">ビジネス</span><time datetime="2026-10-05">2026年10月5日</time></span><span class="a-card__title">AI時代の光学エンジニア｜置き換わる仕事と、残る仕事</span><span class="a-card__desc">スマホカメラの画質を決める光学部材の話から、開発の流れのどこがAIに置き換わり、どこに人の判断が残るのかを整理します。台湾の大学で行った講義をもとにした解説です。</span></a></li></ul></section>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="logo__en">Corporation NW</span>
+        <span>有限会社シン・ワールド</span>
+        <address lang="ja">〒231-0062 神奈川県横浜市中区桜木町2-2<br>港陽ビル THE CODE 横浜 4階</address>
+      </div>
+      <nav class="footer-nav" aria-label="フッターメニュー">
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">COMPANY</span>
+          <a href="/#vision">ビジョン</a>
+          <a href="/#message">CEOメッセージ</a>
+          <a href="/#company">会社概要</a>
+          <a href="/#offices">拠点</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">PRODUCTS</span>
+          <a href="/#products">GLC</a>
+          <a href="/#products">HD6</a>
+          <a href="/articles/">コラム</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">BUSINESSES</span>
+          <a href="/mobile/">NW Mobile</a>
+          <a href="/agent/">NW agent</a>
+          <a href="/tonaritabi/">となり旅</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <nav aria-label="サイト情報">
+        <a href="/#contact">お問い合わせ</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </nav>
+      <small>© 2026 Corporation NW</small>
+    </div>
+  </div>
+</footer>
+<script src="/js/motion.js" defer></script>
+</body>
+</html>
