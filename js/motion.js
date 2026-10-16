@@ -16,7 +16,11 @@
     '.company__head > *', '.profile', '.history',
     '.offices__text > *', '.offices__map', '.office',
     '.col-card',
-    '.contact__inner > *'
+    '.contact__inner > *',
+    // コラム記事（見出しと写真だけ。本文は読みやすさを優先して動かさない）
+    '.a-body h2', '.a-figure', '.a-faq > h2', '.a-sources > h2', '.a-more > h2',
+    // コラム一覧
+    '.a-wrap--wide > .a-head > *', '.a-cards > .a-card'
   ].join(', ');
 
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -30,6 +34,8 @@
   function setDelay(el) {
     var parent = el.parentElement;
     if (!parent) return;
+    // 記事ページは、見出しと写真が1つずつ順に現れるので遅らせない
+    if (document.body.classList.contains('a-page')) return;
     var step = parent.classList.contains('hero__copy') ? 120 : 70;
     var index = 0;
     for (var i = 0; i < parent.children.length; i++) {

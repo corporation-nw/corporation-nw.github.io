@@ -137,3 +137,51 @@
 .a-card__title { font-family: var(--serif); font-size: 18px; line-height: 1.6; color: #fff; word-break: auto-phrase; text-wrap: pretty; }
 .a-card__desc { font-size: 13.5px; line-height: 1.85; color: var(--muted); }
 .a-empty { color: var(--muted); }
+
+
+/* ---------- 演出（見出しと写真の浮き上がり） ---------- */
+/* JavaScript が動くときだけ隠す。動かない環境では、そのまま読める。 */
+.js .a-body h2,
+.js .a-figure,
+.js .a-faq > h2,
+.js .a-sources > h2,
+.js .a-more > h2 {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .9s cubic-bezier(0.22, 0.61, 0.26, 1), transform .9s cubic-bezier(0.22, 0.61, 0.26, 1);
+}
+.js .a-body h2.is-in,
+.js .a-figure.is-in,
+.js .a-faq > h2.is-in,
+.js .a-sources > h2.is-in,
+.js .a-more > h2.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .js .a-body h2,
+  .js .a-figure,
+  .js .a-faq > h2,
+  .js .a-sources > h2,
+  .js .a-more > h2 {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/* コラム一覧 */
+.js .a-wrap--wide > .a-head > *,
+.js .a-cards > .a-card {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity .9s cubic-bezier(0.22, 0.61, 0.26, 1), transform .9s cubic-bezier(0.22, 0.61, 0.26, 1);
+}
+.js .a-wrap--wide > .a-head > *.is-in,
+.js .a-cards > .a-card.is-in { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .a-wrap--wide > .a-head > *,
+  .js .a-cards > .a-card { opacity: 1; transform: none; transition: none; }
+}

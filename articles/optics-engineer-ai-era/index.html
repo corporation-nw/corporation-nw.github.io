@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Shippori+Mincho:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap">
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="/css/article.css">
+  <script>document.documentElement.classList.add('js');</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "AI時代の光学エンジニア｜置き換わる仕事と、残る仕事", "description": "スマホカメラの画質を決める光学部材の話から、開発の流れのどこがAIに置き換わり、どこに人の判断が残るのかを整理します。台湾の大学で行った講義をもとにした解説です。", "datePublished": "2026-10-05", "dateModified": "2026-10-05", "inLanguage": "ja", "mainEntityOfPage": "https://cnw2026.com/articles/optics-engineer-ai-era/", "author": {"@type": "Organization", "name": "Corporation NW 編集部"}, "publisher": {"@type": "Organization", "name": "有限会社シン・ワールド（Corporation NW）", "url": "https://cnw2026.com/"}, "image": ["https://cnw2026.com/articles/images/optics-engineer-ai-era-fovea.jpg", "https://cnw2026.com/articles/images/optics-engineer-ai-era-lightpath.jpg", "https://cnw2026.com/articles/images/optics-engineer-ai-era-shotnoise.jpg", "https://cnw2026.com/articles/images/optics-engineer-ai-era-prism.jpg"]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "人の目とカメラでは、どちらの解像度が高いのですか", "acceptedAnswer": {"@type": "Answer", "text": "比べる軸によって変わります。人の目は網膜の中心にある中心窩の付近だけが高精細で、周辺では細部を見分ける力が落ちます。カメラは中心も周辺も同じ密度で画素が並ぶ代わりに、見たい場所へ性能を寄せることはできません。"}}, {"@type": "Question", "name": "暗い場所で写真がざらつくのはなぜですか", "acceptedAnswer": {"@type": "Answer", "text": "光が粒として届くため、届く数が毎回ゆらぐからです。浜松ホトニクスの技術資料では、このゆらぎを光ショットノイズと呼び、その大きさは信号の平方根で決まると説明されています。信号対雑音比を2倍にするには、光の量を4倍にする必要があります。"}}, {"@type": "Question", "name": "画素を小さくすると画質は良くなりますか", "acceptedAnswer": {"@type": "Answer", "text": "一概には良くなりません。同じセンサー面積でより多くの画素を並べられる一方、1画素が受け取る光子の数は減り、隣の画素への漏れ込みも増えます。そのため暗い場所では複数の画素をまとめて使うなどの対策が取られています。"}}, {"@type": "Question", "name": "光学部材の開発で、AIに置き換わりやすいのはどの作業ですか", "acceptedAnswer": {"@type": "Answer", "text": "定型的な外観検査や測定データの異常検知、設計候補の絞り込みなど、手順が決まっていて正解の形を定義できる作業です。公差の配り方の判断や、現場で異常の兆候に気づくこと、取引先との信頼関係の構築は人の側に残ります。"}}, {"@type": "Question", "name": "スマートフォンが薄いまま望遠を実現できるのはなぜですか", "acceptedAnswer": {"@type": "Answer", "text": "プリズムで光路を直角に折り曲げる屈曲光学（ペリスコープ構造）を使っているためです。レンズを厚み方向ではなく長さ方向に並べることで、薄い筐体のまま焦点距離を確保しています。"}}]}</script>
 </head>
@@ -175,5 +176,6 @@
     </div>
   </div>
 </footer>
+<script src="/js/motion.js" defer></script>
 </body>
 </html>
