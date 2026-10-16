@@ -505,3 +505,76 @@ html[lang="en"] .logo__en, html[lang="en"] .nav a, html[lang="en"] .nav__drop > 
 .biz-sns { margin-top: 20px; font-size: 13px; line-height: 2.1; color: var(--muted); }
 .biz-sns a { display: inline-block; white-space: nowrap; margin-left: 14px; color: var(--body); border-bottom: 1px solid var(--line); padding-bottom: 2px; }
 .biz-sns a:hover { color: #fff; border-color: currentColor; }
+
+/* ---------- 演出（浮き上がり・背景の文字） ---------- */
+/* JavaScript が動くときだけ隠す。動かない環境では、そのまま読める。 */
+.js .hero__copy > *,
+.js .stats__item,
+.js .section__head > *,
+.js .vision__label > *,
+.js .vision__body > *,
+.js .product,
+.js .biz-card,
+.js .message__head > *,
+.js .message__body > *,
+.js .company__head > *,
+.js .profile,
+.js .history,
+.js .offices__text > *,
+.js .offices__map,
+.js .office,
+.js .col-card,
+.js .contact__inner > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.22, 0.61, 0.26, 1), transform 1s cubic-bezier(0.22, 0.61, 0.26, 1);
+}
+.js .is-in { opacity: 1; transform: none; }
+
+/* 背景にうっすら浮かぶ大きな文字 */
+.section { position: relative; overflow: hidden; }
+.section > .container { position: relative; z-index: 1; }
+.wm {
+  position: absolute;
+  top: 50%;
+  right: -0.04em;
+  margin-top: -0.52em;
+  z-index: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 200;
+  font-size: clamp(76px, 18vw, 180px);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+  opacity: 0.05;
+  white-space: nowrap;
+  pointer-events: none;
+  user-select: none;
+  will-change: transform;
+}
+.wm--left { right: auto; left: -0.04em; }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .hero__copy > *,
+  .js .stats__item,
+  .js .section__head > *,
+  .js .vision__label > *,
+  .js .vision__body > *,
+  .js .product,
+  .js .biz-card,
+  .js .message__head > *,
+  .js .message__body > *,
+  .js .company__head > *,
+  .js .profile,
+  .js .history,
+  .js .offices__text > *,
+  .js .offices__map,
+  .js .office,
+  .js .col-card,
+  .js .contact__inner > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+  .wm { display: none; }
+}
