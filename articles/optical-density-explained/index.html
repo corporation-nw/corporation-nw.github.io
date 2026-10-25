@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="N0MdC7l9ra_Mr8z7GULf4NwQdhKX47hE5YBFVFnXuj8" />
+  <title>光学濃度（OD）の読み方｜OD4は透過率0.01%、仕様書の注意点 ｜ Corporation NW</title>
+  <meta name="description" content="光学濃度（OD）と透過率の関係を、OD1〜OD6の早見表で解説。OD4はどれだけ光を通さないのか、仕様書を読むときの波長・公差・測定限界の注意点もまとめます。">
+  <link rel="canonical" href="https://cnw2026.com/articles/optical-density-explained/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="光学濃度（OD）の読み方｜OD4は透過率0.01%、仕様書の注意点 ｜ Corporation NW">
+  <meta property="og:description" content="光学濃度（OD）と透過率の関係を、OD1〜OD6の早見表で解説。OD4はどれだけ光を通さないのか、仕様書を読むときの波長・公差・測定限界の注意点もまとめます。">
+  <meta property="og:url" content="https://cnw2026.com/articles/optical-density-explained/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#06070b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Shippori+Mincho:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/article.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "光学濃度（OD）の読み方｜OD4は透過率0.01%、仕様書の注意点", "description": "光学濃度（OD）と透過率の関係を、OD1〜OD6の早見表で解説。OD4はどれだけ光を通さないのか、仕様書を読むときの波長・公差・測定限界の注意点もまとめます。", "datePublished": "2026-10-26", "dateModified": "2026-10-26", "inLanguage": "ja", "mainEntityOfPage": "https://cnw2026.com/articles/optical-density-explained/", "author": {"@type": "Organization", "name": "Corporation NW 編集部"}, "publisher": {"@type": "Organization", "name": "有限会社シン・ワールド（Corporation NW）", "url": "https://cnw2026.com/"}, "image": ["https://cnw2026.com/articles/images/optical-density-explained-ladder.jpg", "https://cnw2026.com/articles/images/optical-density-explained-reflect-absorb.jpg"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "OD4は透過率でいうとどれくらいですか。", "acceptedAnswer": {"@type": "Answer", "text": "OD4は透過率0.01%、つまり当たった光の1万分の1だけを通す状態です。ODと透過率は T = 10 の（−OD）乗の関係にあり、ODが1上がるごとに通る光は10分の1になります。"}}, {"@type": "Question", "name": "ODが0.3違うと、どれくらい差がありますか。", "acceptedAnswer": {"@type": "Answer", "text": "ODが0.3増えると、通る光はおよそ半分になります。エドモンド・オプティクスの商品ページでも、濃度値0.3の増加は写真のしぼり1段ぶん（透過率が半分）にあたると説明されています。"}}, {"@type": "Question", "name": "フィルターを2枚重ねたとき、ODはどうなりますか。", "acceptedAnswer": {"@type": "Answer", "text": "ODは足し算になります。エドモンド・オプティクスの資料では、ODが0.6と0.9のフィルターを重ねると合計がOD1.5、透過率は3%になる例が示されています。反射型を重ねるときは、戻り光に注意が必要です。"}}, {"@type": "Question", "name": "仕様書のODは、どの波長でも同じですか。", "acceptedAnswer": {"@type": "Answer", "text": "同じとは限りません。ODはどの波長に対する値かを確かめる必要があり、NDフィルターの商品でも遮光する波長域が400〜700nmのように示されています。自分が使う波長で成り立つ値かを確認してください。"}}, {"@type": "Question", "name": "ODが高い部材は、どうやって測るのですか。", "acceptedAnswer": {"@type": "Answer", "text": "光をほとんど通さない部材は、測定装置のノイズが限界になります。セムロックは、320から1120nmの範囲ではOD6.5付近が測定ノイズの限界になると説明しています。高いODの値は、測定条件とあわせて見るのが安全です。"}}]}</script>
+</head>
+<body class="a-page">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="a-header">
+  <div class="a-header__inner">
+    <a class="logo" href="/">
+      <span class="logo__en">Corporation NW</span>
+      <span class="logo__ja">有限会社シン・ワールド</span>
+    </a>
+    <nav class="a-header__nav" aria-label="メインメニュー">
+      <a class="a-hide-sp" href="/#products">製品・サービス</a>
+      <a class="a-hide-sp" href="/#business">事業</a>
+      <a href="/articles/">コラム</a>
+      <a class="a-header__cta" href="/#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="a-main">
+  <article class="a-article">
+    <div class="a-wrap">
+      
+      <nav class="a-crumbs" aria-label="パンくずリスト"><a href="/">ホーム</a><span aria-hidden="true">/</span><a href="/articles/">コラム</a></nav>
+      <header class="a-head">
+        <p class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-10-26">2026年10月26日</time></p>
+        <h1>光学濃度（OD）の読み方｜OD4は透過率0.01%、仕様書の注意点</h1>
+        <p class="a-lead">光学濃度（OD）と透過率の関係を、OD1〜OD6の早見表で解説。OD4はどれだけ光を通さないのか、仕様書を読むときの波長・公差・測定限界の注意点もまとめます。</p>
+      </header>
+      <nav class="a-toc" aria-label="目次"><p class="a-toc__title">目次</p><ol><li><a href="#s1">ODは「何桁ぶん光を減らすか」を表す数字</a></li><li><a href="#s2">OD1からOD6までの透過率を並べてみる</a></li><li><a href="#s3">ODは足し算できる</a></li><li><a href="#s4">仕様書のODを読むときの注意点</a></li><li><a href="#s5">反射型と吸収型：遮った光はどこへ行くのか</a></li><li><a href="#s6">まとめ</a></li></ol></nav>
+      <div class="a-body">
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>遮光フィルムや遮光インキの仕様書を見ていると、「OD4以上」という書き方をよく見かけます。ODという数字そのものが、いまひとつ実感できません。OD4というのは、光をどれくらい通さない状態なのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span><mark>OD4は、当たった光のうち1万分の1しか通さない状態</mark>です。透過率でいうと0.01%にあたります。ODは「光学濃度」を意味する英語 Optical Density の略で、光をどれだけ遮るかを対数で表した数字です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>対数ですか。数字が苦手なので、少し身構えてしまいます。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>難しい計算は出てきませんので、安心してください。ここからは、ODと透過率の関係、仕様書で見落としやすい点、遮光のしかたによる違いを順に見ていきます。まずは、ODがどんな数字なのかからです。</p></div>
+<h2 id="s1">ODは「何桁ぶん光を減らすか」を表す数字</h2>
+<figure class="a-figure"><img src="/articles/images/optical-density-explained-ladder.jpg" alt="光の帯が6枚のガラス板を通るたびに細くなっていく様子。板を通るごとに光が弱まり、最後はごく細い筋だけが残る" loading="lazy" decoding="async"><figcaption>板を1枚通るたびに光が弱まっていくイメージ（実際の減り方の比率を正確に描いたものではありません）</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>ODは、具体的にどう決まる数字なんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>透過率を T（0から1の間の数）とすると、ODは「Tの常用対数にマイナスをつけたもの」です。式で書くと OD = −log10(T) になります。フィルターメーカーのセムロック（Semrock）の説明でも、ODは透過率の対数（底10）の符号を反転したものと定義されています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>逆に、ODから透過率を出したいときはどうしますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>式を逆向きにして、T = 10 の（−OD）乗とします。エドモンド・オプティクスの技術資料では、パーセントで表した透過率は「10の（−OD）乗に100%をかけたもの」と書かれています。たとえばOD1なら10%、OD2なら1%です。<mark>ODが1増えるたびに、通る光は10分の1になります</mark>。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>1増えるごとに10分の1、ということは、増え方がだんだん大きく感じられそうですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そこがODの便利なところです。セムロックの解説では、透過率が6桁、つまり100万倍も変わる範囲を、0から6までのODという小さな数字で表せると説明されています。透過率のままだと「0.0001%」のように小数点以下の0が並んで読みにくくなります。ODなら桁数をそのまま数字で読めるわけです。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>なるほど、ODは「小数点以下に0が何個つくか」を数える数字なんですね。では、OD4を具体的な数字で見せてもらえますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>次の章で、表にしてみます。</p></div>
+<h2 id="s2">OD1からOD6までの透過率を並べてみる</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>ODの値ごとに、どれくらい光が通るのかを一覧で見たいです。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>先ほどの式 T = 10 の（−OD）乗に当てはめて計算した結果が、次の表です。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">OD</th><th scope="col">透過率</th><th scope="col">通る光の割合</th><th scope="col">遮られる光の割合</th></tr></thead><tbody><tr><td>0</td><td>100%</td><td>そのまま</td><td>0%</td></tr><tr><td>0.3</td><td>約50%</td><td>約半分</td><td>約50%</td></tr><tr><td>1</td><td>10%</td><td>10分の1</td><td>90%</td></tr><tr><td>2</td><td>1%</td><td>100分の1</td><td>99%</td></tr><tr><td>3</td><td>0.1%</td><td>1000分の1</td><td>99.9%</td></tr><tr><td>4</td><td>0.01%</td><td>1万分の1</td><td>99.99%</td></tr><tr><td>5</td><td>0.001%</td><td>10万分の1</td><td>99.999%</td></tr><tr><td>6</td><td>0.0001%</td><td>100万分の1</td><td>99.9999%</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>OD0.3が「約半分」というのは、少し中途半端な数字ですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>10の0.3乗がおよそ2なので、ODが0.3増えると透過率がほぼ半分になります。エドモンド・オプティクスの商品ページでも、濃度値が0.3増えると、写真のしぼり1段ぶん（透過率が半分）にあたると説明されています。ODに0.3や1という数字が出てきたら、「半分」や「10分の1」に読み替えると感覚をつかみやすくなります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>OD3とOD4では、どれくらい違うんでしょうか。数字だけ見ると1しか違いません。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>通る光の量でいえば、10倍違います。OD3は1000分の1、OD4は1万分の1ですから、OD4はOD3の10分の1しか光を通しません。「OD3以上」と「OD4以上」は、仕様書の上では1違いでも、遮光性能としてはまったく別の水準です。</p></div>
+<div class="box box--point"><p class="box__title">OD早見のポイント</p><ul><li>ODが1上がると、通る光は10分の1になる</li><li>ODが0.3上がると、通る光はおよそ半分になる</li><li>OD4は透過率0.01%（1万分の1）、OD6は0.0001%（100万分の1）</li><li>透過率は T = 10 の（−OD）乗で求める</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>表の右端の「遮られる光の割合」を見ると、OD3でも99.9%も遮っていますね。OD4との差はほとんどなさそうに見えます。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>遮る割合で見ると、そう感じますよね。ところが、遮光部材が守りたいのは「通ってしまう光」のほうです。通ってくる光は、強い光源の近くでは迷光（本来の光路から外れて像に混ざる余計な光）の原因になり得ます。0.1%と0.01%では、通る光の量が10倍違います。遮光性能は、遮る割合ではなく、<mark>通る光の量で比べる</mark>のが基本です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>見る側の数字を入れ替えるわけですね。重ねて使うときは、また別の計算になるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>実は、重ねる場合にもODは便利です。次の章で見てみます。</p></div>
+<h2 id="s3">ODは足し算できる</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>フィルターを2枚重ねたら、ODはどうなりますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>足し算です。エドモンド・オプティクスのよくある質問のページには、ODが0.6と0.9のNDフィルターを重ねると、合計のODは1.5になり、全体の透過率は3%になると書かれています。透過率のままだと掛け算ですが、ODなら足し算で済みます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>透過率のまま計算しても、同じ答えになるんでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>それぞれの透過率を掛け合わせても、同じ結果になります。<mark>ODなら、重ねた枚数ぶんを足すだけ</mark>で済みます。同じ技術資料には、OD0.3とOD1.5を重ねる例もあります。合計はOD1.8で、透過率は1.58%です。計算に慣れていれば、暗算に近い感覚で見積もれます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>それなら、OD2のフィルターを2枚重ねれば、OD4が作れそうです。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>理屈の上ではそのとおりです。ただ、この足し算が成り立つのは、基本的にフィルターが光を「吸収」するタイプのときです。<mark>反射で光を減らすタイプは、重ねたときに反射光がもう一方に当たって、思わぬところへ戻っていきます</mark>。エドモンド・オプティクスは、反射型を重ねるときは、戻り光を減らすためにフィルターどうしを平行にしないよう勧めています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>反射型と吸収型で、そんなに扱いが違うんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>遮った光が「どこへ行くか」が違います。これは仕様書のODの数字だけでは見えない部分なので、後の章で詳しく見ます。その前に、数字そのものを読むときの落とし穴を確認しましょう。</p></div>
+<h2 id="s4">仕様書のODを読むときの注意点</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>仕様書に「OD4」と書いてあれば、それで安心してよいのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>実際には、ODの数字だけで判断すると見落とすことがいくつかあります。確認したい点を、表にまとめました。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">確認する点</th><th scope="col">見るポイント</th><th scope="col">根拠となる資料の例</th></tr></thead><tbody><tr><td>波長</td><td>どの波長（範囲）でのODか</td><td>エドモンド・オプティクスのNDフィルターは、遮光する波長域を400〜700nmと表記</td></tr><tr><td>平均か最小か</td><td>範囲内の平均値か、下限値か</td><td>同じ商品ページの仕様表は「光学濃度（平均）」と表記</td></tr><tr><td>公差</td><td>表示値からどれくらいずれるか</td><td>同じ商品は公称値の±10%の公差</td></tr><tr><td>測定の限界</td><td>その高いODを測れる装置で測ったか</td><td>セムロックは波長ごとの測定ノイズの下限を公開</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>波長というのは、光の色のことですね。ODは色ごとに変わるんですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>変わることがあります。ODは、どの波長の光に対する値なのかを示して使うものです。エドモンド・オプティクスのNDフィルターは、遮光する波長域を400〜700nmと明記しています。これは可視光のおおよその範囲で、この外側の波長についてまで同じODが保証されているわけではありません。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>使う光の波長が決まっているなら、そこだけ見ればよいのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そのとおりです。仕様書にODが書いてあるときは、「その数字は、自分の使う光の波長で成り立っているか」を確認するのが基本です。波長の記載がない場合は、メーカーに問い合わせて確かめると確実です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>「平均」と「最小」の違いも気になります。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>エドモンド・オプティクスの仕様表では、OD0.3のNDフィルターに対して「光学濃度（平均）」と書かれています。平均値で示されている場合、範囲の中には平均より低いODの波長もあり得ます。遮光部材として使う場合は、範囲の中でもっとも光を通してしまう波長のODが、実際の性能を決めます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>±10%の公差は、OD4だとどのくらいの幅になりますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>OD0.3のNDフィルターの商品ページでは、公称値の±10%の公差と書かれています。この公差をそのままOD4に当てはめると、ODは3.6から4.4の間です。透過率になおすと、約0.025%から約0.004%までと、およそ6倍の幅になります。ODの小さな違いが、通る光の量では大きな差になる、という点は覚えておいてください。</p></div>
+<div class="box box--warn"><p class="box__title">よくある誤解</p><ul><li>「OD4以上」と書かれていれば、どんな波長の光でも1万分の1以下になるとは限らない</li><li>公差のある数字は、ODのわずかなずれが透過率では大きな差になる</li><li>反射型のフィルターのODは、光を「消した」のではなく「戻した」結果である場合がある</li><li>高いODの値は、測定できる装置で測られたものかどうかも確かめたい</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>最後の測定の話は、どういうことでしょうか。数字は測れば出るものだと思っていました。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>光をほとんど通さない部材は、通ってくる光が非常に弱く、測定装置自身のノイズに埋もれてしまいます。セムロックのよくある質問のページでは、320から1120nmの範囲で、透過率が3e-7（OD6.5）付近かそれ以下だと、測定ノイズで限界になると説明されています。320nmより短い波長と、1120から1500nmの範囲ではOD5.5、1500nmより長い波長ではOD5.0が、それぞれ測定ノイズの限界です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>同じ装置でも、波長によって測れる限界が変わるんですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>はい。同社の別の資料では、あるメーカーの市販の測定装置のデータは、OD3を超えると正確でないと書かれています。これはメーカー自身が測定システムを紹介する資料の中の記述なので、数字は参考情報として受け取るのが適切です。それでも、ODが高くなるほど「どうやって測ったか」が重要になるという点は、同じです。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>数字が大きいほど、測る側の条件にも目を向ける必要があるんですね。では、遮った光はどうなるのかも気になってきました。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>次は、光の行き先の話です。</p></div>
+<h2 id="s5">反射型と吸収型：遮った光はどこへ行くのか</h2>
+<figure class="a-figure"><img src="/articles/images/optical-density-explained-reflect-absorb.jpg" alt="左は金属膜付きのガラス板に当たった光が大半が跳ね返って光源側へ戻る様子。右は色のついたガラス板に光が入り、内部で弱まって消えていく様子" loading="lazy" decoding="async"><figcaption>反射型（左）は光を跳ね返し、吸収型（右）は光を材料の中で弱める</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>同じOD4でも、光の遮り方が違うとおっしゃいましたね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>エドモンド・オプティクスの技術資料では、NDフィルターを反射型と吸収型に分けています。反射型は、ガラスの上に薄い膜（多くは金属）をつけたもので、光を主に光源の側へ跳ね返します。吸収型は、ガラスそのものが一定の割合で光を吸収します。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>数字の上では同じODでも、跳ね返された光はどこかへ残るわけですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>そのとおりです。反射型は、跳ね返った光が装置の別の場所に当たって、予想外の迷光になることがあります。エドモンド・オプティクスも、反射型を使うときは反射光が用途の邪魔にならないよう注意が必要だと述べています。<mark>遮光の目的が「余計な光を消すこと」なら、光を材料の中で弱める吸収型のほうが向く場面が多い</mark>のです。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>カメラのレンズの中で、黒いインキを塗って遮光するのも、吸収型の考え方ですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>黒い塗料は、光を吸収して反射を抑える方向で働きます。レンズの縁や鏡筒の内側に塗るのは、迷光を戻さないための工夫です。レンズの内部で迷光がどう生まれて、どう抑えるかは、<a href="/articles/light-shielding-ink-basics/">遮光インキとは？迷光を断つしくみと光学濃度（OD）の基本</a>でくわしく解説しています。レンズ内の反射については、<a href="/articles/ghost-flare-basics/">ゴースト・フレアの正体｜レンズ内反射の原因と抑える技術</a>も参考になります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>ODの数字だけでなく、材料がどう遮っているのかまで見るわけですね。そろそろ全体を振り返りたいです。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>最後の章で、要点をまとめます。</p></div>
+<h2 id="s6">まとめ</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>ここまでの内容を、あらためて振り返ってもらえますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>ODは、透過率の常用対数にマイナスをつけた数字で、OD4は透過率0.01%、つまり1万分の1しか光を通さない状態です。ODが1増えるごとに通る光は10分の1になり、フィルターを重ねたときはODを足し算できます。仕様書を読むときは、波長、平均値か最小値か、公差、測定の限界、そして反射型か吸収型かをあわせて確認すると、数字の意味を取り違えにくくなります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>最後に、この数字を実際の部材選びにどう生かせばよいか、ヒントをもらえますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>「OD4以上」と書かれているときは、まず自分の使う波長でその数字が成り立つかを見てください。そのうえで、必要なODを透過率に直し、通ってよい光の量と照らし合わせます。Corporation NW は、遮光インキ HD6（遮光性能 OD4以上）を取り扱っています。ご関心があれば、<a href="/#products">製品・サービス</a>をご覧ください。</p></div>
+<div class="box box--steps"><p class="box__title">手順</p><ol><li>使う光の波長（範囲）を決める</li><li>仕様書のODが、その波長で示された値かを確かめる</li><li>必要なODを T = 10 の（−OD）乗で透過率に直す</li><li>公差と測定条件を見て、余裕を持たせる</li></ol></div>
+      </div>
+      <section class="a-faq" aria-labelledby="faq-h"><h2 id="faq-h">よくある質問</h2><details><summary>OD4は透過率でいうとどれくらいですか。</summary><p>OD4は透過率0.01%、つまり当たった光の1万分の1だけを通す状態です。ODと透過率は T = 10 の（−OD）乗の関係にあり、ODが1上がるごとに通る光は10分の1になります。</p></details><details><summary>ODが0.3違うと、どれくらい差がありますか。</summary><p>ODが0.3増えると、通る光はおよそ半分になります。エドモンド・オプティクスの商品ページでも、濃度値0.3の増加は写真のしぼり1段ぶん（透過率が半分）にあたると説明されています。</p></details><details><summary>フィルターを2枚重ねたとき、ODはどうなりますか。</summary><p>ODは足し算になります。エドモンド・オプティクスの資料では、ODが0.6と0.9のフィルターを重ねると合計がOD1.5、透過率は3%になる例が示されています。反射型を重ねるときは、戻り光に注意が必要です。</p></details><details><summary>仕様書のODは、どの波長でも同じですか。</summary><p>同じとは限りません。ODはどの波長に対する値かを確かめる必要があり、NDフィルターの商品でも遮光する波長域が400〜700nmのように示されています。自分が使う波長で成り立つ値かを確認してください。</p></details><details><summary>ODが高い部材は、どうやって測るのですか。</summary><p>光をほとんど通さない部材は、測定装置のノイズが限界になります。セムロックは、320から1120nmの範囲ではOD6.5付近が測定ノイズの限界になると説明しています。高いODの値は、測定条件とあわせて見るのが安全です。</p></details></section>
+      <section class="a-sources" aria-labelledby="src-h"><h2 id="src-h">出典・参考資料</h2><ol><li><a href="https://www.idex-hs.com/contact/contact-us/faqs/optical-filters-faqs/what-is-optical-density" target="_blank" rel="noopener">What is optical density? (Semrock FAQ)</a></li><li><a href="https://www.idex-hs.com/resources/resources-detail/working-with-optical-density" target="_blank" rel="noopener">Working with Optical Density (Semrock)</a></li><li><a href="https://idex-hs.com/resources/resources-detail/optical-filters-measurement" target="_blank" rel="noopener">KolaDeep Spectral Measurement System: Measure Deeper Blocking (Semrock)</a></li><li><a href="https://www.edmundoptics.co.uk/knowledge-center/application-notes/optics/understanding-neutral-density-filters/" target="_blank" rel="noopener">Understanding Neutral Density Filters</a></li><li><a href="http://www.edmundoptics.com.tw/knowledge-center/frequently-asked-questions/optics/optical-filters/can-i-place-nd-filters-back-to-back-and-increase-optical-density" target="_blank" rel="noopener">Can I place ND filters back to back and increase optical density?</a></li><li><a href="http://www.edmundoptics.jp/p/03-od-25mm-dia-neutral-density-filter/52636" target="_blank" rel="noopener">0.3 OD 25mm径 ND フィルター</a></li></ol></section>
+      <p class="a-note">この記事は Corporation NW 編集部が、公開されている資料をもとに AI を使って作成し、出典を確認したうえで掲載しています。対話の登場人物は、説明のための設定です。</p>
+      <aside class="a-cta"><span class="eyebrow">Corporation NW</span><p class="a-cta__name">製品・サービス</p><p>GLC・HD6 と取扱技術、業務内容をご紹介しています。</p><a class="btn btn--solid" href="/#products">製品・サービスを見る</a></aside>
+      <section class="a-more" aria-labelledby="more-h"><h2 id="more-h">ほかの記事</h2><ul class="a-cards"><li class="a-card"><a href="/articles/light-shielding-ink-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-10-19">2026年10月19日</time></span><span class="a-card__title">遮光インキとは？迷光を断つしくみと光学濃度（OD）の基本</span><span class="a-card__desc">レンズのコバや鏡筒で起きる迷光と、遮光インキの役割を解説。光学濃度（OD）の読み方や、選ぶときに見る性能項目まで、出典つきでわかります。</span></a></li><li class="a-card"><a href="/articles/co-packaged-optics-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-10-17">2026年10月17日</time></span><span class="a-card__title">Co-Packaged Optics とは｜光をチップの隣まで近づける理由</span><span class="a-card__desc">データセンターのスイッチで進む CPO（光電融合）を、なぜ必要になったのか、何が難しいのか、光学部材の作り手に何が求められるのかの順に解説します。</span></a></li><li class="a-card"><a href="/articles/anti-reflection-coating-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-09-28">2026年9月28日</time></span><span class="a-card__title">反射防止コーティングのしくみ｜屈折率と多層膜の基本</span><span class="a-card__desc">レンズの表面反射はなぜ起きるのか。屈折率の差と光の干渉から、単層膜・多層膜の反射防止コーティングの原理を、出典つきの数値で解説します。</span></a></li></ul></section>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="logo__en">Corporation NW</span>
+        <span>有限会社シン・ワールド</span>
+        <address lang="ja">〒231-0062 神奈川県横浜市中区桜木町2-2<br>港陽ビル THE CODE 横浜 4階</address>
+      </div>
+      <nav class="footer-nav" aria-label="フッターメニュー">
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">COMPANY</span>
+          <a href="/#vision">ビジョン</a>
+          <a href="/#message">CEOメッセージ</a>
+          <a href="/#company">会社概要</a>
+          <a href="/#offices">拠点</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">PRODUCTS</span>
+          <a href="/#products">GLC</a>
+          <a href="/#products">HD6</a>
+          <a href="/articles/">コラム</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">BUSINESSES</span>
+          <a href="/mobile/">NW Mobile</a>
+          <a href="/agent/">NW agent</a>
+          <a href="/tonaritabi/">となり旅</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <nav aria-label="サイト情報">
+        <a href="/#contact">お問い合わせ</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </nav>
+      <small>© 2026 Corporation NW</small>
+    </div>
+  </div>
+</footer>
+<script src="/js/motion.js" defer></script>
+</body>
+</html>
