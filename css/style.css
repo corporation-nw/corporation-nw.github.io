@@ -578,3 +578,9 @@ html[lang="en"] .logo__en, html[lang="en"] .nav a, html[lang="en"] .nav__drop > 
   }
   .wm { display: none; }
 }
+
+/* 製品の段から無料ツール（TMCalc）への案内リンク（2026-11-27） */
+.product__tool { display: inline-flex; align-items: center; gap: 10px; margin-top: 22px; min-height: 44px; padding: 10px 18px;
+  border: 1px solid rgba(159,176,255,.45); border-radius: 999px; font-size: 14px; line-height: 1.5; color: #dfe4ff; }
+.product__tool:hover { border-color: #c9d2ff; background: rgba(159,176,255,.08); color: #fff; }
+.product__tool svg { flex-shrink: 0; }

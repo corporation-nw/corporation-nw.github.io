@@ -1,0 +1,36 @@
+/* Corporation NW — 無料ツールのページ（TMCalc など）。style.css と article.css の上に重ねる。
+   article.css はコラムの生成で上書きされるため、ツール用の指定はこのファイルに書く。 */
+.t-lang { display: flex; gap: 6px; margin: -12px 0 24px; font-family: var(--en); font-size: 12px; }
+.t-lang a { display: inline-flex; align-items: center; min-height: 32px; padding-inline: 10px; border: 1px solid var(--line-soft); border-radius: 999px; color: var(--muted); }
+.t-lang a[aria-current] { color: #fff; border-color: rgba(159,176,255,.6); }
+.t-head { max-width: var(--a-measure); }
+.t-head__btn { align-self: flex-start; margin-top: 8px; }
+
+.t-shot { margin: 0 0 56px; }
+.t-shot img { display: block; width: 100%; height: auto; border-radius: 12px; border: 1px solid var(--line-soft); background: #fff; }
+.t-shot figcaption { margin-top: 12px; font-size: 13px; color: var(--muted); text-align: center; }
+
+.t-sec { margin-top: 56px; }
+.t-sec h2 { padding-top: 28px; margin-bottom: 24px; border-top: 1px solid var(--line); font-family: var(--serif); font-weight: 500;
+  font-size: clamp(21px, 2.6vw, 28px); color: #fff; letter-spacing: .04em; }
+.t-feats { list-style: none; padding: 0; display: grid; gap: 16px; }
+@media (min-width: 720px) { .t-feats { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 1000px) { .t-feats { grid-template-columns: 1fr 1fr 1fr; } }
+.t-feats li { padding: 22px 22px 24px; background: var(--card); border: 1px solid var(--line-soft); border-radius: 12px; }
+.t-feats h3 { font-size: 16px; font-weight: 500; color: #fff; margin-bottom: 10px; }
+.t-feats p { font-size: 14px; line-height: 1.9; color: var(--body); }
+.t-sec .box--steps { max-width: var(--a-measure); }
+
+.t-dls { list-style: none; padding: 0; display: grid; gap: 14px; }
+@media (min-width: 720px) { .t-dls { grid-template-columns: 1fr 1fr; } }
+.t-dl { display: grid; grid-template-columns: 1fr auto; grid-template-areas: "lang btn" "file btn"; align-items: center; gap: 4px 16px;
+  padding: 18px 20px; background: var(--card); border: 1px solid var(--line-soft); border-radius: 12px; }
+.t-dl--primary { border-color: rgba(159,176,255,.55); }
+.t-dl__lang { grid-area: lang; font-size: 17px; color: #fff; }
+.t-dl__file { grid-area: file; font-family: var(--en); font-size: 11.5px; line-height: 1.6; color: var(--muted); word-break: break-all; }
+.t-dl .btn { grid-area: btn; min-height: 46px; padding: 0 20px; font-size: 14px; gap: 8px; }
+.t-dl-note { margin-top: 14px; font-size: 13px; color: var(--muted); }
+
+.t-env { max-width: var(--a-measure); padding-left: 1.2em; display: flex; flex-direction: column; gap: 10px; }
+.t-env li { font-size: 14px; line-height: 1.9; color: var(--body); }
+.t-page .a-cta { max-width: var(--a-measure); }

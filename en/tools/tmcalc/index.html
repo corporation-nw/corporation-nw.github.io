@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TMCalc — Free anti-reflection coating design simulator (Excel) ｜ Corporation NW</title>
+  <meta name="description" content="TMCalc is a free Excel tool that finds the layer thicknesses giving the lowest reflectance: choose the layer structure and materials, then press &quot;Optimize&quot;. Available in English, Japanese and Chinese (Traditional / Simplified).">
+  <link rel="canonical" href="https://cnw2026.com/en/tools/tmcalc/">
+  <link rel="alternate" hreflang="ja" href="https://cnw2026.com/tools/tmcalc/">
+  <link rel="alternate" hreflang="en" href="https://cnw2026.com/en/tools/tmcalc/">
+  <link rel="alternate" hreflang="zh-Hant-TW" href="https://cnw2026.com/zh-tw/tools/tmcalc/">
+  <link rel="alternate" hreflang="zh-Hans-CN" href="https://cnw2026.com/zh-cn/tools/tmcalc/">
+  <link rel="alternate" hreflang="x-default" href="https://cnw2026.com/tools/tmcalc/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TMCalc — Free anti-reflection coating design simulator (Excel)">
+  <meta property="og:description" content="TMCalc is a free Excel tool that finds the layer thicknesses giving the lowest reflectance: choose the layer structure and materials, then press &quot;Optimize&quot;. Available in English, Japanese and Chinese (Traditional / Simplified).">
+  <meta property="og:url" content="https://cnw2026.com/en/tools/tmcalc/">
+  <meta property="og:image" content="https://cnw2026.com/images/tmcalc-en.jpg">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#06070b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Noto+Serif:wght@400;500;600&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/article.css">
+  <link rel="stylesheet" href="/css/tool.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "TMCalc ver6", "applicationCategory": "DesignApplication", "operatingSystem": "Microsoft Excel (Windows, macOS)", "description": "TMCalc is a free Excel tool that finds the layer thicknesses giving the lowest reflectance: choose the layer structure and materials, then press \"Optimize\". Available in English, Japanese and Chinese (Traditional / Simplified).", "inLanguage": "en", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"}, "publisher": {"@type": "Organization", "name": "有限会社シン・ワールド（Corporation NW）", "url": "https://cnw2026.com/"}}</script>
+<script src="/js/analytics.js" defer></script>
+</head>
+<body class="a-page t-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="a-header">
+  <div class="a-header__inner">
+    <a class="logo" href="/en/">
+      <span class="logo__en">Corporation NW</span>
+      <span class="logo__ja">有限会社シン・ワールド</span>
+    </a>
+    <nav class="a-header__nav" aria-label="Main menu">
+      <a class="a-hide-sp" href="/en/#products">Products</a>
+      <a class="a-hide-sp" href="/en/#business">Businesses</a>
+      <a class="a-header__cta" href="/en/#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="a-main">
+  <div class="a-wrap a-wrap--wide">
+    <nav class="a-crumbs" aria-label="Breadcrumb"><a href="/en/">Home</a><span aria-hidden="true">/</span><a href="/en/#products">GLC</a><span aria-hidden="true">/</span><span>TMCalc</span></nav>
+    <p class="t-lang" aria-label="Language"><a href="/tools/tmcalc/" lang="ja" hreflang="ja">JP</a><a href="/en/tools/tmcalc/" lang="en" hreflang="en" aria-current="page">EN</a><a href="/zh-tw/tools/tmcalc/" lang="zh-Hant-TW" hreflang="zh-Hant-TW">繁中</a><a href="/zh-cn/tools/tmcalc/" lang="zh-Hans-CN" hreflang="zh-Hans-CN">简中</a></p>
+    <header class="a-head t-head">
+      <p class="a-meta"><span class="a-cat">Free tool</span><span>Excel ／ ver6</span></p>
+      <h1>TMCalc<br>Anti-reflection coating design simulator</h1>
+      <p class="a-lead">An Excel tool that automatically calculates the layer thicknesses with the lowest reflectance — just choose the layer structure and materials and press "Optimize". It uses the same calculation we use for our low-reflection coating GLC (Ghost Less Coating), now available to everyone.</p>
+      <a class="btn btn--solid t-head__btn" href="#download">Download free <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
+    </header>
+
+    <figure class="t-shot">
+      <img src="/images/tmcalc-en.jpg" width="1300" height="423" alt="The TMCalc Design sheet: layer structure and evaluation conditions on the left, a reflectance-versus-wavelength chart on the right" decoding="async">
+      <figcaption>Design sheet: enter a layer structure and the reflectance at each angle appears on the chart right away</figcaption>
+    </figure>
+
+    <section class="t-sec" aria-labelledby="feat">
+      <h2 id="feat">What it does</h2>
+      <ul class="t-feats">
+          <li><h3>Automatic thickness optimization</h3><p>Set fixed layers and min/max thicknesses, press "Optimize", and TMCalc searches for thicknesses that lower reflectance over your target wavelength range. The current thicknesses are included as a candidate, so the result never gets worse.</p></li>
+          <li><h3>Several conditions at once</h3><p>Evaluate up to three conditions together, such as normal (0°) and oblique (e.g. 40°) incidence. Thinner films at the lens edge can be entered as a "ratio".</p></li>
+          <li><h3>Polarization</h3><p>Choose unpolarized (S/P average), S-polarized only or P-polarized only.</p></li>
+          <li><h3>Measured data and analysis</h3><p>Paste measured reflectance to compare with the design, estimate the thickness of each layer, and get the top-coat target that compensates for PVD deviation.</p></li>
+          <li><h3>Material and substrate tables</h3><p>Materials are registered with Hartmann formula coefficients. If you only know the index nd, a helper creates the coefficients.</p></li>
+          <li><h3>Output sheet</h3><p>A reflectance table and chart for 0–40° (10° steps) over 380–1500 nm, rewritten automatically whenever the design changes.</p></li>
+      </ul>
+    </section>
+
+    <section class="t-sec" aria-labelledby="steps">
+      <h2 id="steps">How to use</h2>
+      <div class="box box--steps">
+        <ol>
+            <li>Download the file in your language below.</li>
+            <li>Open it in Excel and choose "Enable Macros" (charts and result formulas display even without macros).</li>
+            <li>On the "Design" sheet, choose the design type, substrate and the material of each layer, then enter the evaluation conditions (angle of incidence) and target wavelength range.</li>
+            <li>Press "Optimize" and the thicknesses are set automatically. Check the result table and chart against your spec.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="t-sec" id="download" aria-labelledby="dl">
+      <h2 id="dl">Download</h2>
+      <ul class="t-dls">
+          <li class="t-dl t-dl--primary">
+            <span class="t-dl__lang" lang="en">English</span>
+            <span class="t-dl__file">TMCalc_ver6_EN.xlsm<br>3.0 MB</span>
+            <a class="btn btn--solid" href="/downloads/TMCalc_ver6_EN.xlsm" download data-track="TMCalc download EN">Download <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
+          </li>
+          <li class="t-dl">
+            <span class="t-dl__lang" lang="ja">日本語</span>
+            <span class="t-dl__file">TMCalc_ver6_JA.xlsm<br>3.0 MB</span>
+            <a class="btn btn--ghost" href="/downloads/TMCalc_ver6_JA.xlsm" download data-track="TMCalc download JA">Download <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
+          </li>
+          <li class="t-dl">
+            <span class="t-dl__lang" lang="zh-Hans-CN">简体中文</span>
+            <span class="t-dl__file">TMCalc_ver6_ZH-CN.xlsm<br>3.0 MB</span>
+            <a class="btn btn--ghost" href="/downloads/TMCalc_ver6_ZH-CN.xlsm" download data-track="TMCalc download ZH-CN">Download <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
+          </li>
+          <li class="t-dl">
+            <span class="t-dl__lang" lang="zh-Hant-TW">繁體中文</span>
+            <span class="t-dl__file">TMCalc_ver6_ZH-TW.xlsm<br>3.0 MB</span>
+            <a class="btn btn--ghost" href="/downloads/TMCalc_ver6_ZH-TW.xlsm" download data-track="TMCalc download ZH-TW">Download <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></a>
+          </li>
+      </ul>
+      <p class="t-dl-note">File format: Excel macro-enabled workbook (.xlsm)</p>
+    </section>
+
+    <section class="t-sec" aria-labelledby="env">
+      <h2 id="env">Requirements and notes</h2>
+      <ul class="t-env">
+          <li>Use Microsoft Excel (desktop version). Tested with Excel for Microsoft 365 on Mac. The buttons (macros) do not work in Excel for the web, Google Sheets or Numbers.</li>
+          <li>If Windows blocks the macros, right-click the file → "Properties" → "General", tick "Unblock", press "OK" and open the file again.</li>
+          <li>Assumptions: no absorption (k=0); back-surface reflection of the substrate is not included. The angle of incidence is measured in air. Calculation uses the characteristic matrix method.</li>
+          <li>Material and substrate coefficients are reference values; replace them with the values of your own materials. Results are design guidance and do not guarantee the properties of actual products.</li>
+      </ul>
+    </section>
+
+    <div class="a-cta">
+      <p class="a-cta__name">Talk to us about GLC (Ghost Less Coating)</p>
+      <p>For design, prototyping and mass production of low-reflection coatings, please contact us.</p>
+      <a class="btn btn--ghost" href="/en/#contact">Request documents / samples</a>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="logo__en">Corporation NW</span>
+        <span lang="ja">有限会社シン・ワールド</span>
+        <address>4F THE CODE Yokohama, Koyo Building<br>2-2 Sakuragicho, Naka-ku, Yokohama, Kanagawa 231-0062, Japan</address>
+      </div>
+      <nav class="footer-nav" aria-label="Footer menu">
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">COMPANY</span>
+          <a href="/en/#vision">Vision</a>
+          <a href="/en/#message">CEO Message</a>
+          <a href="/en/#company">Company Profile</a>
+          <a href="/en/#offices">Offices</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">PRODUCTS</span>
+          <a href="/en/#products">GLC</a>
+          <a href="/en/#products">HD6</a>
+          <a href="/en/#products">Technologies &amp; services</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">BUSINESSES</span>
+          <a href="/mobile/">NW Mobile</a>
+          <a href="/agent/en/">NW agent</a>
+          <a href="/tonaritabi/">Tonari Tabi</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <nav aria-label="Site information">
+        <a href="/en/#contact">Contact</a>
+        <a href="/en/privacy/">Privacy Policy</a>
+        <a href="/tools/tmcalc/" lang="ja" hreflang="ja">日本語</a>
+        <a href="/zh-tw/tools/tmcalc/" lang="zh-Hant-TW" hreflang="zh-Hant-TW">繁體中文</a>
+        <a href="/zh-cn/tools/tmcalc/" lang="zh-Hans-CN" hreflang="zh-Hans-CN">简体中文</a>
+      </nav>
+      <small>© 2026 Corporation NW</small>
+    </div>
+  </div>
+</footer>
+<script src="/js/motion.js" defer></script>
+</body>
+</html>
