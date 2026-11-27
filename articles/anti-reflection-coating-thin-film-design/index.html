@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="N0MdC7l9ra_Mr8z7GULf4NwQdhKX47hE5YBFVFnXuj8" />
+  <title>反射防止膜のしくみ｜薄膜干渉と膜厚・多層膜の設計 ｜ Corporation NW</title>
+  <meta name="description" content="反射防止膜が反射を消す薄膜干渉のしくみと、膜厚・屈折率の決め方、多層膜、斜入射と偏光で設計が難しくなる理由を図で解説します。">
+  <link rel="canonical" href="https://cnw2026.com/articles/anti-reflection-coating-thin-film-design/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="反射防止膜のしくみ｜薄膜干渉と膜厚・多層膜の設計 ｜ Corporation NW">
+  <meta property="og:description" content="反射防止膜が反射を消す薄膜干渉のしくみと、膜厚・屈折率の決め方、多層膜、斜入射と偏光で設計が難しくなる理由を図で解説します。">
+  <meta property="og:url" content="https://cnw2026.com/articles/anti-reflection-coating-thin-film-design/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#06070b">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500&amp;family=Shippori+Mincho:wght@400;500;600&amp;family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/article.css">
+  <script>document.documentElement.classList.add('js');</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "反射防止膜のしくみ｜薄膜干渉と膜厚・多層膜の設計", "description": "反射防止膜が反射を消す薄膜干渉のしくみと、膜厚・屈折率の決め方、多層膜、斜入射と偏光で設計が難しくなる理由を図で解説します。", "datePublished": "2026-11-27", "dateModified": "2026-11-27", "inLanguage": "ja", "mainEntityOfPage": "https://cnw2026.com/articles/anti-reflection-coating-thin-film-design/", "author": {"@type": "Organization", "name": "Corporation NW 編集部"}, "publisher": {"@type": "Organization", "name": "有限会社シン・ワールド（Corporation NW）", "url": "https://cnw2026.com/"}, "image": ["https://cnw2026.com/articles/images/anti-reflection-coating-thin-film-design-quarter-wave.jpg", "https://cnw2026.com/articles/images/anti-reflection-coating-thin-film-design-multilayer.jpg", "https://cnw2026.com/articles/images/anti-reflection-coating-thin-film-design-oblique.jpg"]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "反射防止膜の膜厚は、なぜ1/4波長なのですか。", "acceptedAnswer": {"@type": "Answer", "text": "膜の表面と、膜とガラスの境目で反射した2本の光が、往復の遅れで半波長ずれると、山と谷が重なって打ち消し合うためです。往復で半波長なら、片道は膜の中の波長の1/4になります。設計した波長でのみ、この条件が成り立ちます。"}}, {"@type": "Question", "name": "反射防止膜に理想の屈折率はありますか。", "acceptedAnswer": {"@type": "Answer", "text": "単層膜では、空気とガラスの屈折率の相乗平均が理想です。空気を1、ガラスを1.5とすると1.225ですが、実在の代表的な材料であるフッ化マグネシウムは1.38で、反射は0%にならず1%前後が残ります。"}}, {"@type": "Question", "name": "なぜ多層膜が使われるのですか。", "acceptedAnswer": {"@type": "Answer", "text": "単層膜は設計した波長の付近にしか効かないためです。屈折率の異なる膜を重ねると、各境界で出る反射波の振幅と位相を調整でき、広い波長帯域で反射を下げられます。2層で1つの波長、3層で2つの波長の反射をゼロにできるとされています。"}}, {"@type": "Question", "name": "斜めから入る光で、反射防止膜の性能が落ちるのはなぜですか。", "acceptedAnswer": {"@type": "Answer", "text": "斜めに入る光は膜の中を斜めに通り、往復の経路が変わるためです。干渉の条件が設計値から外れ、打ち消しが不完全になります。さらに、S偏光とP偏光で反射率に差が出るため、角度と偏光ごとに設計が必要です。"}}]}</script>
+<script src="/js/analytics.js" defer></script>
+</head>
+<body class="a-page">
+<a class="skip-link" href="#main">本文へ移動</a>
+<header class="a-header">
+  <div class="a-header__inner">
+    <a class="logo" href="/">
+      <span class="logo__en">Corporation NW</span>
+      <span class="logo__ja">有限会社シン・ワールド</span>
+    </a>
+    <nav class="a-header__nav" aria-label="メインメニュー">
+      <a class="a-hide-sp" href="/#products">製品・サービス</a>
+      <a class="a-hide-sp" href="/#business">事業</a>
+      <a href="/articles/">コラム</a>
+      <a class="a-header__cta" href="/#contact">お問い合わせ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="a-main">
+  <article class="a-article">
+    <div class="a-wrap">
+      
+      <nav class="a-crumbs" aria-label="パンくずリスト"><a href="/">ホーム</a><span aria-hidden="true">/</span><a href="/articles/">コラム</a></nav>
+      <header class="a-head">
+        <p class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-11-27">2026年11月27日</time></p>
+        <h1>反射防止膜のしくみ｜薄膜干渉と膜厚・多層膜の設計</h1>
+        <p class="a-lead">反射防止膜が反射を消す薄膜干渉のしくみと、膜厚・屈折率の決め方、多層膜、斜入射と偏光で設計が難しくなる理由を図で解説します。</p>
+      </header>
+      <nav class="a-toc" aria-label="目次"><p class="a-toc__title">目次</p><ol><li><a href="#s1">反射はなぜ起きるのか</a></li><li><a href="#s2">1/4波長の膜で反射が打ち消し合うしくみ</a></li><li><a href="#s3">屈折率と膜厚の決め方</a></li><li><a href="#s4">多層膜で広い波長に効かせる考え方</a></li><li><a href="#s5">斜めから入る光と偏光で設計が難しくなる理由</a></li><li><a href="#s6">膜厚の最適化はどう進めるのか</a></li><li><a href="#s7">まとめ</a></li></ol></nav>
+      <div class="a-body">
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>カメラのレンズや眼鏡のレンズを斜めから見ると、表面がうっすら紫や緑に光って見えます。あれが反射防止膜（ARコート）だと聞きましたが、そもそも膜を重ねるだけで、どうして反射が減るのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span><mark>反射を遮っているのではなく、干渉で打ち消している</mark>のが答えです。膜の表面と、膜とガラスの境目の2か所で光が反射し、その2本の反射光が山と谷でぶつかるように膜の厚さを決めると、互いに消し合います。ここからは、その干渉のしくみと、膜厚・屈折率の決め方、多層膜、斜めから入る光で設計が難しくなる理由までを順に見ていきます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>干渉で消すとなると、膜の厚さはかなり精密に決める必要がありそうですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>はい、光の波長の何分の1という単位で効いてきます。屈折率と多層膜の基本は、<a href="/articles/anti-reflection-coating-basics/">反射防止コーティングのしくみ｜屈折率と多層膜の基本</a>でもまとめています。ここでは、膜厚の決め方と、斜めから入る光まで踏み込みます。まず、そもそも反射がなぜ起きるのかから始めましょう。</p></div>
+<h2 id="s1">反射はなぜ起きるのか</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>ガラスは透明なのに、窓に自分の顔が映ります。透明なものでも反射はするのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>光は屈折率の違う物質の境目で、一部が必ず反射します。屈折率とは、その物質の中で光がどれだけ遅くなるかを表す数字です。空気は約1、一般的なガラスは1.5前後で、この差が大きいほど反射も大きくなります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>反射する量は、具体的にどのくらいなのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>光学ガラスの NBK7（屈折率1.5前後のよく使われるガラス）は、可視光の全域でおよそ4.26%を反射すると、レーザー光学の専門誌 Laser Focus World の解説に書かれています。ジェームズ・ワイアント教授（アリゾナ大学）の講義資料では、膜のないガラス面の反射を4%として計算を進めています。レンズは何枚も重なり、表と裏の面ごとに反射が生じるので、この数%が何度も積み重なります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>面が何枚分も積み重なると、かなりの光が失われますね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>失われるだけでなく、跳ね返った光がレンズの中をさまよってゴーストやフレアの原因にもなります。<mark>反射を1面ごとに減らすことが、明るさとコントラストの両方に効いてくる</mark>わけです。ゴーストの成り立ちは<a href="/articles/ghost-flare-basics/">ゴースト・フレアの正体</a>の記事でも扱っています。では、反射を消す方法を見ていきましょう。</p></div>
+<h2 id="s2">1/4波長の膜で反射が打ち消し合うしくみ</h2>
+<figure class="a-figure"><img src="/articles/images/anti-reflection-coating-thin-film-design-quarter-wave.jpg" alt="薄膜の2つの界面で反射した光が、山と谷で重なって打ち消し合う様子（左）と、厚さが合わずに強め合う様子（右）の概念図" loading="lazy" decoding="async"><figcaption>左：膜厚が適切で、2本の反射光が打ち消し合う。右：膜厚が合わず、反射光が強め合う。</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>図の左側では、2本の反射光が重なって消えています。どういう条件でこうなるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>膜の表面で反射する光と、膜を通り抜けてガラスとの境目で反射し戻ってくる光は、膜の中を往復した分だけ遅れます。この遅れがちょうど半波長になると、片方の山にもう片方の谷が重なって、反射波が消えます。ウィキペディアの反射防止膜の項目でも、2本目の光が1本目より「波長の半分だけ余計に進む」ときに打ち消し合うと説明されています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>往復で半波長なら、膜の厚さは片道で4分の1波長ということですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>その通りです。膜の中の光の波長で数えて4分の1の厚さにした膜を、1/4波長膜と呼びます。なお、空気から膜、膜からガラスへと屈折率が段階的に上がる構成では、どちらの境目でも光の位相が180°ずれて反射します。ずれが2か所で同じなので、差し引きは往復の遅れだけが残る、と考えてください。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>位相が180°ずれるというのは、反射のたびに波が裏返るということですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>光が屈折率の低い側から高い側へ向かって反射するとき、波の山と谷が入れ替わるように反射します。Wikipedia の薄膜干渉の項目では、反射する側の屈折率が高い場合に、上側と下側の境目の両方で180°の位相ずれが生じると書かれています。両方で入れ替わるなら、2本の反射光の関係を決めるのは膜の厚さだけになります。</p></div>
+<div class="box box--point"><p class="box__title">打ち消し合いの2条件</p><ul><li>位相：往復の遅れが半波長になる（膜厚は膜の中の波長の1/4）</li><li>振幅：2本の反射光の強さが等しい（膜の屈折率を適切に選ぶ）</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>位相だけでなく、強さも揃える必要があるのですね。次は、その屈折率の選び方を教えてください。</p></div>
+<h2 id="s3">屈折率と膜厚の決め方</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>膜に使う材料は、何でも良いわけではないのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>2本の反射光の強さを揃えるには、膜の屈折率を、空気とガラスの屈折率の相乗平均にします。式で書くと n₁ = √(n₀ × nₛ) です。ここで n₀ は入射側（空気）、nₛ は基板（ガラス）の屈折率で、ワイアント教授の資料でも、ウィキペディアでも同じ式が示されています。空気を1、ガラスを1.5とすると、膜の理想の屈折率は1.225になります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>1.225という屈折率の材料は実在するのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>緻密な固体の材料では、見つかりません。広く使われるフッ化マグネシウム（MgF₂）は屈折率が1.38で、理想より少し高い値です。ワイアント教授の資料によると、それでも1/4波長の単層膜で、可視域の全体にわたり反射率を4%からおよそ1%まで下げられます。Laser Focus World の例では、NBK7 ガラスに MgF₂ を付けた場合の反射が約1.26%で、0%にはならないとされています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>膜の厚さは、どう計算すればよいのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>設計する波長を λ、膜の屈折率を n として、物理的な厚さは d = λ ÷ (4n) です。単層膜は、中心付近の波長（例えば緑の550 nm）に合わせて計算されることが多く、HyperPhysics（ジョージア州立大学）でも、550 nm を例に挙げています。MgF₂（屈折率1.38）で550 nm に合わせるなら、550 ÷ (4 × 1.38) で、物理膜厚はおよそ99.6 nm です。光の波長より短い、非常に薄い膜になります。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">項目</th><th scope="col">値</th><th scope="col">求め方</th></tr></thead><tbody><tr><td>理想の膜の屈折率</td><td>1.225</td><td>√(1 × 1.5)</td></tr><tr><td>MgF₂ の屈折率</td><td>1.38</td><td>実在の材料の代表値</td></tr><tr><td>550 nm 用の物理膜厚（MgF₂）</td><td>99.6 nm</td><td>550 ÷ (4 × 1.38)</td></tr><tr><td>膜なしのガラス面の反射</td><td>4%</td><td>屈折率1.5のガラス</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>同じ550 nm でも、膜の屈折率が変われば厚さも変わるのですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>膜の中では光が遅くなって波長が短くなるので、屈折率が高い材料ほど、薄くて済みます。この「光学膜厚」（屈折率×物理膜厚）が波長の1/4になる、という言い方もよく使われます。Laser Focus World の解説では、これを QWOT（1/4波長光学膜厚）と呼んでいます。</p></div>
+<div class="box box--warn"><p class="box__title">よくある誤解：「1/4波長なら全部の色が消える」</p><p><mark>1/4波長膜が反射をゼロにするのは、設計した1つの波長だけです。</mark>ほかの波長では打ち消しが不完全になり、反射が残ります。「ARコートで反射がゼロになる」という説明は、設計波長・垂直入射のときの話です。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>設計した波長からずれると効かなくなるなら、可視光の全体に効かせるにはどうするのですか。</p></div>
+<h2 id="s4">多層膜で広い波長に効かせる考え方</h2>
+<figure class="a-figure"><img src="/articles/images/anti-reflection-coating-thin-film-design-multilayer.jpg" alt="屈折率の異なる3層の薄膜に入った光が、各境界で反射した成分を打ち消し合い、ほとんどがガラスへ進む様子の概念図" loading="lazy" decoding="async"><figcaption>屈折率の異なる膜を重ね、複数の境界で生じる反射波を互いに消し合わせる。</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>膜を何枚も重ねると、反射が増えそうな気もします。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>一見そう思えますが、境目が増えるぶん、調整できる反射波が増えます。日本光学会の解説記事（キヤノンの奥野丈晴氏）は、カメラ用レンズのマルチコートを、屈折率の異なる薄膜を適切な厚さで積層し、各膜の表面と界面で出る反射波の振幅と位相を調整して干渉させ、反射光を減らすものと説明しています。調整できる量が増えれば、設計できる自由度も増えます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>具体的には、どんな材料をどう重ねるのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>ワイアント教授の資料には、高屈折率の材料として酸化ジルコニウム（屈折率2.1）、酸化チタン（2.4）、硫化亜鉛（2.32）、低屈折率の材料としてフッ化マグネシウム（1.38）、フッ化セリウム（1.63）が挙がっています。2層で1つの波長、3層で2つの波長の反射をゼロにできる、とも書かれています。Laser Focus World は3層の広帯域ARの例として、屈折率1.65を1/4波長、屈折率2.1を2つ分の1/4波長（つまり半波長）、屈折率1.38を1/4波長とする構成を紹介しています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>その3層構成だと、1層のときと比べてどのくらい違うのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>上の構成を空気側から屈折率1.38、2.1、1.65の順にして、特性行列法（膜の1層ごとの光の伝わり方を行列で表し、掛け合わせる計算法）で自前に計算してみました。条件は、基板の屈折率が1.5、吸収なし、基板の裏面反射は含めない、設計波長は550 nm です。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">波長</th><th scope="col">MgF₂ 単層</th><th scope="col">3層構成</th></tr></thead><tbody><tr><td>400 nm</td><td>2.22%</td><td>3.99%</td></tr><tr><td>450 nm</td><td>1.72%</td><td>0.27%</td></tr><tr><td>550 nm</td><td>1.41%</td><td>0.06%</td></tr><tr><td>650 nm</td><td>1.56%</td><td>0.06%</td></tr><tr><td>700 nm</td><td>1.70%</td><td>0.22%</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>450 nm から700 nm までは、3層のほうがずっと低いですね。ただ、400 nm では単層より悪くなっています。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>よく気づかれました。<mark>多層膜は、効かせたい帯域を広げる代わりに、帯域の外側では単層より悪くなる場合もあります</mark>。この例では、青紫の400 nm 付近が設計の外に出ています。可視光全体を狙うなら、層の数や材料を増やして、帯域の両端まで効かせる設計に進みます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>層を増やせば、何でも解決するわけではないのですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>層が増えるほど、成膜のばらつきの影響を受けやすくなり、コストも上がります。後で触れる斜めの光の問題とあわせて、どこまで追い込むかを決めるのが設計の仕事です。では、その斜めの光で何が起きるのかを見ましょう。</p></div>
+<h2 id="s5">斜めから入る光と偏光で設計が難しくなる理由</h2>
+<figure class="a-figure"><img src="/articles/images/anti-reflection-coating-thin-film-design-oblique.jpg" alt="垂直に入る光は膜の中を短い経路で通って反射が打ち消され、斜めに入る光は膜の中を長く通って反射が残り、青とオレンジの2つの偏光の反射光が出ていく様子の概念図" loading="lazy" decoding="async"><figcaption>左：垂直入射で反射が消える。右：斜め入射では経路が変わり、反射が残る。青とオレンジは2つの偏光を表す。</figcaption></figure>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>ここまでは光が真っすぐ入る前提でした。実際のレンズでは、斜めから入る光も多いですよね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>広角レンズの周辺部や、曲率の大きいレンズ面では、大きな角度で光が入ります。上のキヤノンの解説でも、大曲率のレンズでは周辺部に大きな角度で光線が入るため、フレアやゴーストの原因になりやすいと述べています。さらに、多層膜は特定の波長・入射角の光線には優れた性能を出すものの、それ以外では干渉条件が崩れ、広い波長帯域と広い入射角度範囲の両方で高い性能を出すのは困難だった、とも書かれています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>角度が変わると、なぜ干渉条件が崩れるのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>斜めに入った光は、膜の中を斜めに通るので、往復の経路が変わります。Wikipedia の薄膜干渉の項目では、経路の差を 2n₂d cosθ₂（θ₂ は膜の中での光の角度）と導いています。角度が大きくなると cosθ₂ が小さくなり、往復の遅れが半波長から外れて、打ち消しが不完全になります。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>偏光も関係すると聞きました。偏光とは何でしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>偏光とは、光の振動の向きです。入射面（光が入る方向と面の垂線が作る面）に垂直に振動する光をS偏光、入射面の中で振動する光をP偏光と呼びます。垂直入射では両者に違いがありませんが、斜めになるとガラス面での反射率に差が出ます。Wikipedia のフレネル方程式の項目では、ガラス（屈折率1.5）で P偏光の反射がゼロになるブルースター角が約56°で、鏡のように見える反射はS偏光が中心だと書かれています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>膜がある場合も、S偏光とP偏光で差が出るのでしょうか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>出ます。先ほどの MgF₂ 単層膜（550 nm 用）で、入射角を40°にして計算した結果を表にしました。垂直入射では、S偏光もP偏光も同じ1.41%です。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">入射角</th><th scope="col">偏光</th><th scope="col">450 nm</th><th scope="col">550 nm</th><th scope="col">650 nm</th></tr></thead><tbody><tr><td>0°</td><td>S・P（同じ）</td><td>1.72%</td><td>1.41%</td><td>1.56%</td></tr><tr><td>40°</td><td>S偏光</td><td>3.28%</td><td>3.36%</td><td>3.90%</td></tr><tr><td>40°</td><td>P偏光</td><td>0.35%</td><td>0.37%</td><td>0.50%</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>40°では、S偏光が3.36%で、P偏光が0.37%ですか。10倍近い差があります。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span><mark>S偏光は角度が付くほど反射が増えて</mark>、この膜では垂直入射の2倍以上になります。一方、P偏光は膜なしの面でもブルースター角に向かって反射が減るので、低い値のままです。<mark>膜の効果と偏光の効果が重なって、S偏光とP偏光で別々の曲線になる</mark>、というのが斜入射設計の難しさの本質です。</p></div>
+<div class="box box--warn"><p class="box__title">設計値は「入射角」を決めて読む</p><p>カタログに載っている反射率のグラフは、多くが垂直入射、または特定の角度での値です。広角レンズ・周辺光線・偏光の強い光源（ディスプレイや水面の反射光など）を扱うときは、角度と偏光ごとの数字を確認しましょう。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>では、これらの条件を全部まとめて満たす膜厚は、どうやって見つけるのですか。</p></div>
+<h2 id="s6">膜厚の最適化はどう進めるのか</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>手計算で、層の数だけ膜厚を決めていくのは大変そうです。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>実際の設計では、計算で最適化します。まず、膜の構成（材料の並び）と、目標にする波長範囲・入射角・偏光を決めます。次に、特性行列法で反射率を計算し、目標範囲の平均反射率が最も低くなるよう、膜厚を少しずつ動かして探します。ワイアント教授の講義資料も、多層膜の解析を、境界条件から出発した特性行列で行う順序で説明しています。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>最適化で、条件を厳しくしすぎると何が起きるのですか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>垂直入射だけに合わせた設計が、斜めでは崩れることがあります。上の3層構成でも、550 nm のS偏光は、垂直入射では0.06%でしたが、40°では0.82%に上がります。複数の入射角（例えば0°と40°）をまとめて評価に入れると、どちらの角度でも極端に悪くならない膜厚を探すことになり、垂直入射だけの最小値とは引き換えになります。</p></div>
+<div class="a-table"><table><thead><tr><th scope="col">条件</th><th scope="col">3層構成の反射率（550 nm）</th></tr></thead><tbody><tr><td>垂直入射（0°）</td><td>0.06%</td></tr><tr><td>40°・P偏光</td><td>0.10%</td></tr><tr><td>40°・S偏光</td><td>0.82%</td></tr></tbody></table></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>計算に使う前提で、気をつけることはありますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>先ほどの計算は、吸収がないこと（消衰係数 k が0）、基板の裏面反射を含めないことを前提にしています。実際の膜は、わずかに光を吸収し、材料の屈折率も波長でゆっくり変わります。成膜でできる膜は、設計値とも少しずれます。そのため、<mark>計算結果は「設計の目安」</mark>で、最後は実測と突き合わせて詰めます。</p></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>計算が目安だとすると、実測との比較も欠かせないのですね。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>はい。膜厚が数 nm ずれると反射の谷の位置が動くので、実測のスペクトルと計算を重ねて、膜厚や屈折率を補正していきます。最後に、ここまでの要点をまとめます。</p></div>
+<h2 id="s7">まとめ</h2>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>反射防止膜が反射を減らすしくみと、設計の難しさを教えてください。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>反射防止膜は、膜の表面と膜とガラスの境目で反射した2本の光が、山と谷で重なって打ち消し合うことで反射を減らしています。そのための条件は、往復の遅れが半波長になる膜厚（1/4波長）と、反射光の強さを揃える屈折率（空気とガラスの相乗平均）です。単層では設計波長付近にしか効かないため、多層膜で帯域を広げます。ただし、斜めから入る光では経路が変わり、S偏光とP偏光で反射が分かれます。</p></div>
+<div class="box box--point"><p class="box__title">この記事の要点</p><ul><li>反射防止膜は、2か所の反射を干渉で打ち消す</li><li>膜厚は光学膜厚で1/4波長、屈折率は √(空気 × 基板)</li><li>多層膜で帯域を広げられるが、帯域の外では悪化する場合もある</li><li>入射角が大きくなると、S偏光とP偏光で反射が分かれる</li><li>角度・偏光・波長の全体を見て、膜厚を最適化する</li></ul></div>
+<div class="bubble bubble--left"><span class="bubble__who" aria-hidden="true">聞き手</span><p><span class="visually-hidden">聞き手：</span>自分で膜厚の最適化を試せるものはありますか。</p></div>
+<div class="bubble bubble--right"><span class="bubble__who" aria-hidden="true">解説</span><p><span class="visually-hidden">解説：</span>NW では、反射防止膜の設計シミュレーター「<a href="/tools/tmcalc/">TMCalc</a>」を、無料の Excel ツールとして公開しています。膜厚の最適化を試せますが、結果は設計の目安です。</p></div>
+      </div>
+      <section class="a-faq" aria-labelledby="faq-h"><h2 id="faq-h">よくある質問</h2><details><summary>反射防止膜の膜厚は、なぜ1/4波長なのですか。</summary><p>膜の表面と、膜とガラスの境目で反射した2本の光が、往復の遅れで半波長ずれると、山と谷が重なって打ち消し合うためです。往復で半波長なら、片道は膜の中の波長の1/4になります。設計した波長でのみ、この条件が成り立ちます。</p></details><details><summary>反射防止膜に理想の屈折率はありますか。</summary><p>単層膜では、空気とガラスの屈折率の相乗平均が理想です。空気を1、ガラスを1.5とすると1.225ですが、実在の代表的な材料であるフッ化マグネシウムは1.38で、反射は0%にならず1%前後が残ります。</p></details><details><summary>なぜ多層膜が使われるのですか。</summary><p>単層膜は設計した波長の付近にしか効かないためです。屈折率の異なる膜を重ねると、各境界で出る反射波の振幅と位相を調整でき、広い波長帯域で反射を下げられます。2層で1つの波長、3層で2つの波長の反射をゼロにできるとされています。</p></details><details><summary>斜めから入る光で、反射防止膜の性能が落ちるのはなぜですか。</summary><p>斜めに入る光は膜の中を斜めに通り、往復の経路が変わるためです。干渉の条件が設計値から外れ、打ち消しが不完全になります。さらに、S偏光とP偏光で反射率に差が出るため、角度と偏光ごとに設計が必要です。</p></details></section>
+      <section class="a-sources" aria-labelledby="src-h"><h2 id="src-h">出典・参考資料</h2><ol><li><a href="https://annex.jsap.or.jp/photonics/kogaku/public/40-01-kaisetsu1.pdf" target="_blank" rel="noopener">サブ波長構造による高性能反射防止膜の開発とそのカメラ用レンズへの応用</a></li><li><a href="https://wp.optics.arizona.edu/jcwyant/wp-content/uploads/sites/13/2016/08/multilayerfilms.pdf" target="_blank" rel="noopener">8. Multilayer Films (Optics 505)</a></li><li><a href="https://hyperphysics.gsu.edu/hbase/phyopt/antiref.html" target="_blank" rel="noopener">Anti-Reflection Coatings</a></li><li><a href="https://laserfocusworld.com/optics/article/16547029/thinfilm-coatings-understanding-key-design-principles-of-antireflection-coatings" target="_blank" rel="noopener">Thin-film Coatings: Understanding key design principles of antireflection coatings</a></li><li><a href="https://en.wikipedia.org/wiki/Anti-reflective_coating" target="_blank" rel="noopener">Anti-reflective coating</a></li><li><a href="https://en.wikipedia.org/wiki/Thin-film_interference" target="_blank" rel="noopener">Thin-film interference</a></li><li><a href="https://en.wikipedia.org/wiki/Fresnel_equations" target="_blank" rel="noopener">Fresnel equations</a></li></ol></section>
+      <p class="a-note">この記事は Corporation NW 編集部が、公開されている資料をもとに AI を使って作成し、出典を確認したうえで掲載しています。対話の登場人物は、説明のための設定です。</p>
+      <aside class="a-cta"><span class="eyebrow">Corporation NW</span><p class="a-cta__name">TMCalc</p><p>反射防止膜の膜厚を自動で計算する、無料の Excel ツールです。</p><a class="btn btn--solid" href="/tools/tmcalc/">TMCalcを見る</a></aside>
+      <section class="a-more" aria-labelledby="more-h"><h2 id="more-h">ほかの記事</h2><ul class="a-cards"><li class="a-card"><a href="/articles/moth-eye-low-reflection/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-11-23">2026年11月23日</time></span><span class="a-card__title">モスアイ構造とは｜低反射の仕組みと多層膜コーティングとの違い</span><span class="a-card__desc">モスアイ構造が微細な突起で屈折率をなだらかにして反射を抑えるしくみを解説。多層膜コーティングとの違い、強度や汚れの弱点、使い分けの考え方までわかります。</span></a></li><li class="a-card"><a href="/articles/optical-density-explained/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-10-26">2026年10月26日</time></span><span class="a-card__title">光学濃度（OD）の読み方｜OD4は透過率0.01%、仕様書の注意点</span><span class="a-card__desc">光学濃度（OD）と透過率の関係を、OD1〜OD6の早見表で解説。OD4はどれだけ光を通さないのか、仕様書を読むときの波長・公差・測定限界の注意点もまとめます。</span></a></li><li class="a-card"><a href="/articles/light-shielding-ink-basics/"><span class="a-meta"><span class="a-cat">技術解説</span><time datetime="2026-10-19">2026年10月19日</time></span><span class="a-card__title">遮光インキとは？迷光を断つしくみと光学濃度（OD）の基本</span><span class="a-card__desc">レンズのコバや鏡筒で起きる迷光と、遮光インキの役割を解説。光学濃度（OD）の読み方や、選ぶときに見る性能項目まで、出典つきでわかります。</span></a></li></ul></section>
+    </div>
+  </article>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__top">
+      <div class="site-footer__brand">
+        <span class="logo__en">Corporation NW</span>
+        <span>有限会社シン・ワールド</span>
+        <address lang="ja">〒231-0062 神奈川県横浜市中区桜木町2-2<br>港陽ビル THE CODE 横浜 4階</address>
+      </div>
+      <nav class="footer-nav" aria-label="フッターメニュー">
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">COMPANY</span>
+          <a href="/#vision">ビジョン</a>
+          <a href="/#message">CEOメッセージ</a>
+          <a href="/#company">会社概要</a>
+          <a href="/#offices">拠点</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">PRODUCTS</span>
+          <a href="/#products">GLC</a>
+          <a href="/#products">HD6</a>
+          <a href="/articles/">コラム</a>
+        </div>
+        <div class="footer-nav__col">
+          <span class="footer-nav__label">BUSINESSES</span>
+          <a href="/mobile/">NW Mobile</a>
+          <a href="/agent/">NW agent</a>
+          <a href="/tonaritabi/">となり旅</a>
+        </div>
+      </nav>
+    </div>
+    <div class="site-footer__bottom">
+      <nav aria-label="サイト情報">
+        <a href="/#contact">お問い合わせ</a>
+        <a href="/privacy/">プライバシーポリシー</a>
+      </nav>
+      <small>© 2026 Corporation NW</small>
+    </div>
+  </div>
+</footer>
+<script src="/js/motion.js" defer></script>
+</body>
+</html>
